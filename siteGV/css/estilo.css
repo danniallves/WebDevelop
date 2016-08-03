@@ -1,0 +1,82 @@
+body {
+	background-image: url("../bernardoGV/fundo1366.jpg");
+	background-repeat: no-repeat;
+	height: 1200px;
+	min-height: 700px;
+}
+
+.conteudo {
+	width: 80%;
+	min-height: 50%;
+	position: relative;
+	background-color: rgba(0, 32, 128, 0.90);
+	margin: auto;
+	margin-top: 10%;
+	padding: 2% 5%;
+	border-radius: 2.5%;
+}
+
+a:link {
+	color: #ffffff;
+}
+
+a:visited {
+	color: #e6e6e6;
+}
+
+a:focus {
+	background-color: #66e0ff;
+	color: #bfbfbf;
+}
+
+a:hover {
+	color: #cccccc;
+}
+
+a:active {
+	color: #ff0000;
+}
+
+nav ul {
+	/*border: 2px solid #cccccc;*/
+	width: 110%;
+	margin-left: -7.5%;
+	margin-top: -1%;
+	margin-bottom: 3%;
+}
+
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	color: #ffffff;
+	color: #000000;
+	padding: .75em;
+}
+
+nav ul li a {
+	background-color: #88cc00;
+	padding: .5em;
+	border-radius: .5em;
+	font-size: 1.2em;
+}
+
+nav ul li a:hover {
+	color: #ffffff;
+}
+
+nav ul li a:active {
+	color: #cecece;
+}
+
+
+#guitarrista {
+	position: absolute;
+	right: -10%;
+	bottom: -5%;
+}
+
+#logo {
+	position: relative;
+	display: block;
+	margin: auto;
+}

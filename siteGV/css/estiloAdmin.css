@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/*     ***********    Área dos formulários   *****************  */
+
+fieldset {
+	background-color: #cecece;
+	border-radius : 10px;
+	padding: 10px;
+	width: 30%;
+	margin: 20px;
+}
+
+fieldset ul {
+	list-style-type: none;
+}
+
+fieldset li {
+	margin: 20px;
+}
+
+legend {
+	color: #ffffff;
+	background-color: #323232;
+	border-radius: 5px;
+	padding: 0.3em 1em;
+	margin-left: 12px;
+}
+
+label {
+	display: inline-block;
+	padding: 3px 6px;
+	margin-left: -20px;
+	text-align: right;
+	width: 70px;
+	vertical-align: top;
+}
+
+label#adicionaSaldo {
+	width: 120px;
+	margin-left: -70px;
+}
+
+/*     *****************  Fim da área dos formulários   **************************  */
+
+table {
+	border-collapse: collapse;
+	margin: auto;
+}
+
+caption {
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 1em;
+	color: #cccccc;
+}
+
+th, td {
+	border: 1px solid black;
+	padding: .75em;
+	text-align: center;
+	color: #ffffff;
+}
+
+thead tr {
+	background-color: #0000e6;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #4d4dff;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #0000e6;
+}
+
+p , h3 {
+	color: #ffffff;
+}
+
