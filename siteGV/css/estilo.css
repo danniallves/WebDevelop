@@ -118,9 +118,9 @@ div.caixa {
 /*   ***********  Área do rodapé  ***************************8******  */
 
 footer {
-    bottom: -4%;
+    margin-bottom: -10%;
     width: 100%;
-    position: absolute;
+    position: relative;
 }
 
 
@@ -131,7 +131,7 @@ div.info-inst {
 
 .info-inst {
     background-color: #88cc00;
-    width: 70%;
+    width: 80%;
     padding: 0px;
 }
 
