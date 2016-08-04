@@ -1,12 +1,12 @@
 body {
 	background-image: url("../bernardoGV/fundo1366.jpg");
 	background-repeat: no-repeat;
-	height: 1200px;
+	max-height: 1200px;
 	min-height: 700px;
 }
 
 .conteudo {
-	width: 80%;
+	width: 70%;
 	min-height: 50%;
 	position: relative;
 	background-color: rgba(0, 32, 128, 0.80);
