@@ -98,6 +98,10 @@ div.container-logo {
     width: 100%;
 }
 
+section.conheca-escola {
+    margin-bottom: 3%;
+}
+
 section#ultimas-noticias {
     margin-bottom: 3%;
     width: 60%;
@@ -118,15 +122,16 @@ div.caixa {
 /*   ***********  Área do rodapé  ***************************8******  */
 
 footer {
-    margin-bottom: -10%;
+    bottom: -7.5%;
     width: 100%;
-    position: relative;
+    height: 10%;
+    position: absolute;
 }
 
 
 div.info-inst {
     position: relative;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 .info-inst {
