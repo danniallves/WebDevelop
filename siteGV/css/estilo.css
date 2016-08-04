@@ -1,7 +1,7 @@
 body {
-	background-image: url("../bernardoGV/fundo1366.jpg");
+	background-image: url("../img/fundo1366.jpg");
 	background-repeat: no-repeat;
-	max-height: 1200px;
+	height: 1200px;
 	min-height: 700px;
 }
 
@@ -14,6 +14,7 @@ body {
 	margin-top: 10%;
 	padding: 2% 5%;
 	border-radius: 2.5%;
+    color: #ffffff;
 }
 
 a:link {
@@ -37,11 +38,13 @@ a:active {
 	color: #ff0000;
 }
 
+/* *********   Área de definição da navegação  ************  */
+
 nav ul {
 	/*border: 2px solid #cccccc;*/
-	width: 110%;
-	margin-left: -7.5%;
-	margin-top: -1%;
+	width: 130%;
+	margin-left: -15%;
+	margin-top: -5%;
 	margin-bottom: 3%;
 }
 
@@ -68,15 +71,92 @@ nav ul li a:active {
 	color: #cecece;
 }
 
+/*  *****  Fim da área de navegação  ***************  */
+
+div#container-guitarrista {
+    position: absolute;
+    right: -5%;
+    bottom: -3%;
+    width: 15%;
+    height: 15*(255/150)%;
+}
 
 #guitarrista {
-	position: absolute;
-	right: -10%;
-	bottom: -5%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+div.container-logo {
+    width: 25%;
+    height: 25(174/250)%;
+    margin: auto;
 }
 
 #logo {
-	position: relative;
-	display: block;
-	margin: auto;
+    height: 100%;
+    width: 100%;
 }
+
+section#ultimas-noticias {
+    margin-bottom: 3%;
+    width: 60%;
+    border-right: 2px dotted black;
+}
+
+div#area-noticias {
+    background-color: white;
+}
+
+div.caixa {
+    width: 50%;
+    height: 100px;
+    background-color: white;
+}
+
+
+/*   ***********  Área do rodapé  ***************************8******  */
+
+footer {
+    bottom: -4%;
+    width: 100%;
+    position: absolute;
+}
+
+
+div.info-inst {
+    position: relative;
+    margin-top: 2%;
+}
+
+.info-inst {
+    background-color: #88cc00;
+    width: 70%;
+    padding: 0px;
+}
+
+.info-inst h1 {
+    font-size: 2em;
+    margin-bottom: -1%;
+    margin-top: -.5%;
+    padding-left: 5%;
+}
+
+.info-inst p {
+    font-size: 1.2em;
+    margin-top: 0px;
+    margin-bottom: -.5%;
+    padding-left: 5%;
+}
+
+.info-inst span#telefone {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 2.5%;
+}
+
+.info-inst span#telefone img {
+    display: inline;
+    vertical-align: center;
+}
+
