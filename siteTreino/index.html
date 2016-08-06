@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Meu site de treino</title>
+	<link rel="stylesheet" href="css/estiloTreino.css">
+</head>
+<body>
+<div id="conteudo">
+	<header>
+		<nav>
+			<a href="../siteGV/">Ir para o site do GV</a>
+		</nav>
+		<h1>Site treino</h1>
+		<h2>Olá. Bem-vindo(a) ao meu site treino.</h2>
+	</header>
+	
+	
+	<section id="formulario">
+	
+	<p>Vou fazer um formulário!</p>
+	<h3>Formulário teste </h3>
+	<form method="post" action="recebeForm.php">
+	<fieldset>
+		<legend>Novo Usuário</legend>
+		<ul>
+			<li>
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome" required="required" placeholder="Digite seu primeiro nome" />
+			</li>
+			<li>
+				<label for="sobrenome">Sobrenome:</label>
+				<input type="text" id="sobrenome" name="sobrenome" required="required" placeholder="Digite seu sobrenome" />
+			</li>
+		</ul>
+		<input type="submit" value="Enviar"/>
+	</fieldset>
+	</form>
+	</section>
+	
+	<hr>
+	
+	<section id="tabela">
+	<p>Agora vou fazer uma tabela!</p>
+	<table>
+		<caption>Tabela Teste</caption>
+		<colgroup>
+			<col id="selections" >
+			<col id="ailier-gauche" style="background-color:red;color:white">
+			<col id="arriere">
+			<col id="ailier-droite">
+		</colgroup>
+		<thead>
+			<tr>
+			<th scope="col" lang="fr">Selection</th>
+			<th scope="col" lang="fr">Ailier gauche</th>
+			<th scope="col" lang="fr">Arrière</th>
+			<th scope="col" lang="fr">Ailier droite</th>
+			</tr>
+		</thead>
+		<tbody lang="en">
+			<tr>
+			<th scope="row">All Blacks</th>
+			<td>Julien Savea</td>
+			<td>Ben Smith</td>
+			<td>Millner-Skuder</td>
+			</tr>
+			<tr>
+			<th scope="row">Wallabies</th>
+			<td>Drew Mitchell</td>
+			<td>Israel Folau</td>
+			<td>Ashley-Cooper</td>
+			</tr>
+			<tr>
+			<th scope="row">Springboks</th>
+			<td>Bryan Habana</td>
+			<td>Willye Le Roux</td>
+			<td>J. P. Petersen</td>
+			</tr>
+		</tbody>
+	</table>
+	</section>
+	
+	<hr>
+	
+	<section id="usandoJavaScript">
+	<h3>Agora vou tentar usar javascript para ir mudando a cor dessa bolinha conforme vou clicando</h3>
+	<p>Clique na bolinha para mudar a cor</p>
+	<div id="container-esquerda" class="container">
+		<div id="caixa-esquerda" class="caixa">
+			<div class="bolinha" id="bola-parada" onclick="clickBolinha(this)">
+			
+			</div>
+		</div>
+	</div>
+	<div id="container-direita" class="container">
+		<div id="caixa-direita" class="caixa">
+			<div class="bolinha" id="bola-quique" onclick="clickBolinha(this)">
+			
+			</div>
+		</div>
+		<button id="play" class="controle">Iniciar</button>
+		<button id="restart" class="controle">Reiniciar</button>
+	</div>
+	</section>
+	
+	<hr>
+	
+	<section id="jogos">
+		<h2>***  Espaço reservado para joguinhos  ***</h2>
+	</section>
+</div>
+	<script src="js/mudaBolinha.js"></script>
+	<script src="js/controleAnimacao.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+body {
+	background-image: url("../imagens/flores.jpg");
+}
+
+div#conteudo {
+	width: 1200px;
+	height: auto;
+	background-color: rgba(102, 153, 255, 0.9);
+	margin: 20px 180px;
+	padding-bottom : 50px;
+	padding-top: 20px;
+	border-radius: 20px;
+}
+
+section {
+	margin : 80px 40px;
+	position : relative;
+	overflow: auto;
+}
+
+header h1, h2 {
+	text-align: center;
+}
+
+nav a {
+	color: white;
+	padding-left: 20px;
+}
+
+nav a:hover {
+	color: lightgreen;
+}
+
+nav a:visited {
+	color: white;
+}
+
+fieldset {
+	background-color: #cecece;
+	border-radius : 10px;
+	padding: 10px;
+	width: 30%;
+}
+
+fieldset ul {
+	list-style-type: none;
+}
+
+fieldset li {
+	margin: 20px;
+}
+
+legend {
+	color: #ffffff;
+	background-color: #323232;
+	border-radius: 5px;
+	padding: 0.3em 1em;
+	margin-left: 12px;
+}
+
+label {
+	display: inline-block;
+	padding: 3px 6px;
+	margin-left: -30px;
+	text-align: right;
+	width: 70px;
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table th, td {
+	font-size: .875em;
+	padding: .5em .75em;
+	border: 1px solid black;
+	text-align: center;
+}
+
+table colgroup col#arriere {
+	background-color: blue;
+	color: white;
+}
+
+thead tr {
+	background-color: #d5dcef
+}
+
+tbody tr:nth-child(odd){
+	background-color: #9781b7;
+}
+
+tbody tr:nth-child(even){
+	background-color: #d5dcef;
+}
+
+
+/*
+thead tr:hover{
+	background-color: yellow;
+	color: white;
+}
+
+tbody tr:nth-child(odd):hover{
+	background-color: yellow;
+	color: white;
+}
+
+tbody tr:nth-child(even):hover{
+	background-color: yellow;
+	color: white;
+}
+*/
+
+tr:hover {
+	background-color: green !important;
+	color: white !important;
+}
+
+col:hover {
+	background-color:green;
+}
+
+/*table colgroup col#arriere {
+	background-color: blue;
+	color: white;
+}*/
+
+.container {
+	border : 2px solid black;
+	width: 450px;
+	height: 300px;
+	border-radius: 20px;
+	float : left;
+}
+
+div#container-esquerda {
+	clear: left;
+}
+
+div#container-direita {
+	clear: right;
+	margin-left : 100px;
+	text-align: center;
+}
+
+.caixa {
+	background-color: white;
+	width: 400px;
+	height: 200px;
+	margin: 10px auto;
+}
+
+.bolinha {
+	width : 100px;
+	height: 100px;
+	border-radius: 50px;
+	background-color: red;
+	position: relative;
+	left: 150px;
+	top: 50px;
+}
+
+@keyframes quicando {
+	0%   {top:0px ; left:0px;}
+	50%  {top:100px ; left:150px;}
+	100% {top:0px ; left:300px}
+}
+
+#container-direita .bolinha {
+	background-color: green;
+	margin : 0px;
+	position: relative;
+	animation-name: quicando;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-iteration-count: 5;
+	animation-play-state: paused;
+}
+
+button.controle {
+	width: 20%;
+	font-size: 1em;
+	margin-top: 5%;
+}
+
+button#restart {
+	display: none;
+}
+
+section#joguinhos h1, h2{
+	text-align: center;
+}
