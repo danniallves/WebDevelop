@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 100%, "Lucida Sans", Verdana, sans-serif;
+    position: relative;
+    margin: -22px -2px;
+    padding: 10px 20px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+nav ul {
+    margin-left: 0px;
+    padding-left: 10px;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 0px;
+}
+
+nav li a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+fieldset {
+	background-color: #cecece;
+	border-radius : 10px;
+	padding: 10px;
+	width: 30%;
+}
+
+fieldset ul {
+	list-style-type: none;
+}
+
+fieldset li {
+	margin: 20px;
+}
+
+legend {
+	color: #ffffff;
+	background-color: #323232;
+	border-radius: 5px;
+	padding: 0.3em 1em;
+	margin-left: 12px;
+}
+
+label {
+	display: inline-block;
+	padding: 3px 6px;
+	margin-left: -30px;
+	text-align: right;
+	width: 70px;
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table th, td {
+	font-size: .875em;
+	padding: .5em .75em;
+	border: 1px solid black;
+	text-align: center;
+}
+
+table colgroup col#arriere {
+	background-color: blue;
+	color: white;
+}
+
+thead tr {
+	background-color: #d5dcef
+}
+
+tbody tr:nth-child(odd){
+	background-color: #9781b7;
+}
+
+tbody tr:nth-child(even){
+	background-color: #d5dcef;
+}
+
+tr:hover {
+	background-color: green !important;
+	color: white !important;
+}
+
+col:hover {
+	background-color:green;
+}
+
+/* Para Smartphones: */
+@media only screen and (max-width: 500px){
+    
+    [class*="col-"] {
+        width: 100%;
+    }
+    
+    body {
+        margin: 0;
+        background-color: #eaeae1;
+    }
+    
+    header {
+        background-color: #000000;
+        color: #ffffff;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 80px;
+        padding: 0;
+        z-index: 999;
+    }
+    
+    header h1 {
+        margin: 0px auto;
+    }
+    
+    header nav {
+        position: relative;
+        bottom: 0px;
+        margin-top: 0;
+        padding: 0;
+        width: auto;
+        height: 50%;
+    }
+    
+    header nav ul {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header nav ul li {
+        height: 100%;
+        width: 25%;
+        margin: 0;
+        margin-top: 2px;
+        padding: 2% 3%;
+        float: left;
+        border: 1px solid white;
+        text-align: center
+    }
+    
+    div.conteudo {
+        position: relative;
+        top: 80px;
+        z-index: 100;
+    }
+    
+    table {
+        margin: auto;
+    }
+}

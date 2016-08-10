@@ -3,23 +3,37 @@
 <head>
 	<meta charset="utf-8">
 	<title>Meu site de treino</title>
-	<link rel="stylesheet" href="css/estiloTreino.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Retirando este estilo para poder fazer um estilo base e utilizar media queries
+	<link rel="stylesheet" href="css/estiloTreino.css"> -->
+    <link rel="stylesheet" href="css/estilo-responsivo.css">
 </head>
 <body>
-<div id="conteudo">
-	<header>
+<!-- Início da página -->
+<div id="pagina">
+    
+	<header class="col-12">
+        <h1>Site treino</h1>
+		
 		<nav>
-			<a href="../siteGV/">Ir para o site do GV</a>
+            <ul>
+                <li><a href="#formulario">Formulário</a></li>
+                <li><a href="#tabela">Tabela</a></li>
+                <li><a href="#animacoes">Animações</a></li>
+                <li><a href="#jogos">Jogos</a></li>
+            </ul>
 		</nav>
-		<h1>Site treino</h1>
-		<h2>Olá. Bem-vindo(a) ao meu site treino.</h2>
+		
 	</header>
+    
+    <!-- Início do conteúdo -->
+    <div class="conteudo">
 	
+    <p class="saudacao">Olá. Bem-vindo(a) ao meu site treino.</p>
 	
 	<section id="formulario">
 	
-	<p>Vou fazer um formulário!</p>
-	<h3>Formulário teste </h3>
+	<h1>Formulários </h1>
 	<form method="post" action="recebeForm.php">
 	<fieldset>
 		<legend>Novo Usuário</legend>
@@ -41,7 +55,7 @@
 	<hr>
 	
 	<section id="tabela">
-	<p>Agora vou fazer uma tabela!</p>
+	<h1>Tabelas</h1>
 	<table>
 		<caption>Tabela Teste</caption>
 		<colgroup>
@@ -83,8 +97,8 @@
 	
 	<hr>
 	
-	<section id="usandoJavaScript">
-	<h3>Agora vou tentar usar javascript para ir mudando a cor dessa bolinha conforme vou clicando</h3>
+	<section id="animacoes">
+	<h1>Animações</h1>
 	<p>Clique na bolinha para mudar a cor</p>
 	<div id="container-esquerda" class="container">
 		<div id="caixa-esquerda" class="caixa">
@@ -107,8 +121,13 @@
 	<hr>
 	
 	<section id="jogos">
-		<h2>***  Espaço reservado para joguinhos  ***</h2>
+        <h1>Jogos</h1>
+		<p>***  Espaço reservado para joguinhos  ***</p>
 	</section>
+        
+    <!-- fim do conteúdo -->
+    </div>
+<!-- fim da página -->
 </div>
 	<script src="js/mudaBolinha.js"></script>
 	<script src="js/controleAnimacao.js"></script>
