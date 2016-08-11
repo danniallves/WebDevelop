@@ -99,6 +99,89 @@ col:hover {
 	background-color:green;
 }
 
+
+
+/******       Área da animação   ****************/
+
+.bolinha {
+	width : 100px;
+	height: 100px;
+	border-radius: 50px;
+	background-color: red;
+	position: relative;
+	left: 150px;
+	top: 50px;
+}
+
+@keyframes quicando {
+	0%   {top:0px ; left:0px;}
+	50%  {top:100px ; left:150px;}
+	100% {top:0px ; left:300px}
+}
+
+#container-direita .bolinha {
+	background-color: green;
+	margin : 0px;
+	position: relative;
+	animation-name: quicando;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+	animation-iteration-count: 5;
+	animation-play-state: paused;
+}
+
+button.controle {
+	width: 20%;
+	font-size: 1em;
+	margin-top: 5%;
+}
+
+button#restart {
+	display: none;
+}
+
+section#joguinhos h1, h2{
+	text-align: center;
+}
+
+/*section#animacao {
+    overflow: auto;
+}
+
+.container {
+	border : 2px solid black;
+	width: 450px;
+	height: 300px;
+	border-radius: 20px;
+	float : left;
+}
+
+div#container-esquerda {
+	clear: left;
+}
+
+div#container-direita {
+	clear: right;
+	margin-left : 100px;
+	text-align: center;
+}
+
+.caixa {
+	background-color: white;
+	width: 400px;
+	height: 200px;
+	margin: 10px auto;
+}
+
+
+
+.clearfix {
+    overflow: auto;
+}*/
+
+/*************   Fim da áera da animação     **********************/
+
 /* Para Smartphones: */
 @media only screen and (max-width: 500px){
     
@@ -136,22 +219,49 @@ col:hover {
         height: 50%;
     }
     
-    header nav ul {
+    header nav .dropdown {
+        position: relative;
+        display: inline-block;
+        /*height: 100%;*/
+        width: 15%;
+    }
+    
+    .dropdown ul {
+        width: 200%;
+    }
+    
+    .menu-header {
         height: 100%;
+        font-size: 1.4em;
+        font-weight: 500;
+        text-align: left;
+        padding: 3%;
+        padding-left: 10%;
+    }
+    
+    header nav .dropdown-content {
+        display: none;
+        height: 80%;
+        background-color: #f9f9f9;
         margin: 0;
         padding: 0;
     }
     
     header nav ul li {
-        height: 100%;
-        width: 25%;
         margin: 0;
         margin-top: 2px;
         padding: 2% 3%;
-        float: left;
-        border: 1px solid white;
         text-align: center
     }
+    
+    header nav ul li:hover {
+        background-color: #e0e0d1;
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
     
     div.conteudo {
         position: relative;
@@ -159,7 +269,40 @@ col:hover {
         z-index: 100;
     }
     
+    section {
+        margin: 120px 0px;
+        padding: 80px 10px 60px 10px;
+    }
+    
+    section:last-of-type {
+        margin-bottom: 300px;
+        padding-bottom: 200px;
+    }
+    
+    
     table {
         margin: auto;
+    }
+    
+    /****  Animações  ****/
+    
+    
+    
+    
+    
+    
+    
+    
+    /* fim da aéra das animações */
+    
+    
+    footer {
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 501px) {
+    body {
+        max-height: 4000px;
     }
 }

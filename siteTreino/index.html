@@ -16,12 +16,16 @@
         <h1>Site treino</h1>
 		
 		<nav>
-            <ul>
-                <li><a href="#formulario">Formulário</a></li>
-                <li><a href="#tabela">Tabela</a></li>
-                <li><a href="#animacoes">Animações</a></li>
-                <li><a href="#jogos">Jogos</a></li>
-            </ul>
+            <div class="dropdown">
+                <h1 class="menu-header">Menu</h1>
+                <ul class="dropdown-content">
+                    <li><a href="#formulario">Formulário</a></li>
+                    <li><a href="#tabela">Tabela</a></li>
+                    <li><a href="#videos">Vídeos</a></li>
+                    <li><a href="#animacoes">Animações</a></li>
+                    <li><a href="#jogos">Jogos</a></li>
+                </ul>
+            </div>
 		</nav>
 		
 	</header>
@@ -33,89 +37,104 @@
 	
 	<section id="formulario">
 	
-	<h1>Formulários </h1>
-	<form method="post" action="recebeForm.php">
-	<fieldset>
-		<legend>Novo Usuário</legend>
-		<ul>
-			<li>
-				<label for="nome">Nome:</label>
-				<input type="text" id="nome" name="nome" required="required" placeholder="Digite seu primeiro nome" />
-			</li>
-			<li>
-				<label for="sobrenome">Sobrenome:</label>
-				<input type="text" id="sobrenome" name="sobrenome" required="required" placeholder="Digite seu sobrenome" />
-			</li>
-		</ul>
-		<input type="submit" value="Enviar"/>
-	</fieldset>
-	</form>
+        <h1>Formulários </h1>
+        <form method="post" action="recebeForm.php">
+            <fieldset>
+                <legend>Novo Usuário</legend>
+                <ul>
+                    <li>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required="required" placeholder="Digite seu primeiro nome" />
+                    </li>
+                    <li>
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" required="required" placeholder="Digite seu sobrenome" />
+                    </li>
+                </ul>
+                <input type="submit" value="Enviar"/>
+            </fieldset>
+        </form>
 	</section>
 	
 	<hr>
 	
 	<section id="tabela">
-	<h1>Tabelas</h1>
-	<table>
-		<caption>Tabela Teste</caption>
-		<colgroup>
-			<col id="selections" >
-			<col id="ailier-gauche" style="background-color:red;color:white">
-			<col id="arriere">
-			<col id="ailier-droite">
-		</colgroup>
-		<thead>
-			<tr>
-			<th scope="col" lang="fr">Selection</th>
-			<th scope="col" lang="fr">Ailier gauche</th>
-			<th scope="col" lang="fr">Arrière</th>
-			<th scope="col" lang="fr">Ailier droite</th>
-			</tr>
-		</thead>
-		<tbody lang="en">
-			<tr>
-			<th scope="row">All Blacks</th>
-			<td>Julien Savea</td>
-			<td>Ben Smith</td>
-			<td>Millner-Skuder</td>
-			</tr>
-			<tr>
-			<th scope="row">Wallabies</th>
-			<td>Drew Mitchell</td>
-			<td>Israel Folau</td>
-			<td>Ashley-Cooper</td>
-			</tr>
-			<tr>
-			<th scope="row">Springboks</th>
-			<td>Bryan Habana</td>
-			<td>Willye Le Roux</td>
-			<td>J. P. Petersen</td>
-			</tr>
-		</tbody>
-	</table>
+        <h1>Tabelas</h1>
+        <table>
+            <caption>Tabela Teste</caption>
+            <colgroup>
+                <col id="selections" >
+                <col id="ailier-gauche" style="background-color:red;color:white">
+                <col id="arriere">
+                <col id="ailier-droite">
+            </colgroup>
+            <thead>
+                <tr>
+                <th scope="col" lang="fr">Selection</th>
+                <th scope="col" lang="fr">Ailier gauche</th>
+                <th scope="col" lang="fr">Arrière</th>
+                <th scope="col" lang="fr">Ailier droite</th>
+                </tr>
+            </thead>
+            <tbody lang="en">
+                <tr>
+                <th scope="row">All Blacks</th>
+                <td>Julien Savea</td>
+                <td>Ben Smith</td>
+                <td>Millner-Skuder</td>
+                </tr>
+                <tr>
+                <th scope="row">Wallabies</th>
+                <td>Drew Mitchell</td>
+                <td>Israel Folau</td>
+                <td>Ashley-Cooper</td>
+                </tr>
+                <tr>
+                <th scope="row">Springboks</th>
+                <td>Bryan Habana</td>
+                <td>Willye Le Roux</td>
+                <td>J. P. Petersen</td>
+                </tr>
+            </tbody>
+        </table>
 	</section>
 	
+    <hr>
+        
+    <section id="videos">
+        <h1>Meus vídeos no YouTube</h1>
+        <ul>
+            <li><a href="https://www.youtube.com/watch?v=5Hfrbl62JgY">Vídeo de 2011</a></li>
+            <li><a href="https://www.youtube.com/watch?v=_dFsXT6cxGY">Voodoo Child Jam</a></li>
+            <li><a href="https://www.youtube.com/watch?v=-HojjNHsje8">Jam com Fernando</a></li>
+            <li><a href="https://www.youtube.com/watch?v=YSHVpgqwFO8">Tentativa de música com Fernando</a></li>
+        </ul>
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/_dFsXT6cxGY">
+        </iframe>
+     
+    </section>
+        
 	<hr>
 	
 	<section id="animacoes">
-	<h1>Animações</h1>
-	<p>Clique na bolinha para mudar a cor</p>
-	<div id="container-esquerda" class="container">
-		<div id="caixa-esquerda" class="caixa">
-			<div class="bolinha" id="bola-parada" onclick="changeColor(this)">
-			
-			</div>
-		</div>
-	</div>
-	<div id="container-direita" class="container">
-		<div id="caixa-direita" class="caixa">
-			<div class="bolinha" id="bola-quique" onclick="changeColor(this)">
-			
-			</div>
-		</div>
-		<button id="play" class="controle">Iniciar</button>
-		<button id="restart" class="controle">Reiniciar</button>
-	</div>
+        <h1>Animações</h1>
+        <p>Clique na bolinha para mudar a cor</p>
+        <div id="container-esquerda" class="container">
+            <div id="caixa-esquerda" class="caixa">
+                <div class="bolinha" id="bola-parada" onclick="changeColor(this)">
+
+                </div>
+            </div>
+        </div>
+        <div id="container-direita" class="container">
+            <div id="caixa-direita" class="caixa">
+                <div class="bolinha" id="bola-quique" onclick="changeColor(this)">
+
+                </div>
+            </div>
+            <button id="play" class="controle">Iniciar</button>
+            <button id="restart" class="controle">Reiniciar</button>
+        </div>
 	</section>
 	
 	<hr>
@@ -125,8 +144,16 @@
 		<p>***  Espaço reservado para joguinhos  ***</p>
 	</section>
         
+    
+        
     <!-- fim do conteúdo -->
     </div>
+    
+    <hr>
+    
+    <footer>
+        <p>Site criado por Bernardo Amado.</p>
+    </footer>
 <!-- fim da página -->
 </div>
 	<script src="js/mudaBolinha.js"></script>
