@@ -8,6 +8,8 @@ var pointer = 1;
 var menuVideo = document.getElementsByClassName("menu-video");
 var videosYouTube = document.getElementsByClassName("video-youtube");
 menuVideo[0].style.display = "none";
+var corBtnDesativado = "rgba(0, 0, 0, 0.0)";
+var corBtnAtivo = "rgba(210, 224, 224, 0.6)";
 
 telaVideo.onmouseover = function () {
     "use strict";
@@ -79,5 +81,38 @@ function mudaVideo(botao) {
     var cod = getCodigo(pointer - 1);
     telinha.setAttribute("src", youTube + cod);
     btnChangeDisplay();
+    manipulaCor();
 }
 
+function manipulaCor() {
+    "use strict";
+    if (pointer < 4) {
+        btnNext.style.backgroundColor = corBtnAtivo;
+    }
+    else {
+        btnNext.style.backgroundColor = corBtnDesativado;
+    }
+    if (pointer > 1) {
+        btnPrevious.style.backgroundColor = corBtnAtivo;
+    }
+    else {
+        btnPrevious.style.backgroundColor = corBtnDesativado;
+    }
+    
+}
+
+function passaVideo(botao) {
+    "use strict";
+    if (botao === btnPrevious && pointer > 1) {
+        pointer--;
+        var cod = getCodigo(pointer - 1);
+        telinha.setAttribute("src", youTube + cod);
+    }
+    else if (botao === btnNext && pointer < 4) {
+        pointer++;
+        var cod = getCodigo(pointer - 1);
+        telinha.setAttribute("src", youTube + cod);
+    }
+    btnChangeDisplay();
+    manipulaCor();
+}

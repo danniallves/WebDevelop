@@ -140,6 +140,11 @@ iframe {
     position: relative;
     top: 40%;
     left: 10%;
+    background-color: rgba(210, 224, 224, 0.6);
+}
+
+.faixa button:hover {
+    cursor: pointer;
 }
 
 #faixa-esquerda {
