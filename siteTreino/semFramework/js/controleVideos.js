@@ -49,6 +49,7 @@ function getCodigo(indice) {
     "use strict";
     var endereco = videosYouTube[indice].getAttribute("href");
     var codigo = endereco.substring(endereco.length - 11, endereco.length);
+    codigo += "?rel=0";
     return codigo;
 }
 
