@@ -15,6 +15,8 @@ header h1 {
     text-align: center;
 }
 
+/* *****  menu   **********  */
+
 nav ul {
     margin-left: 0px;
     padding-left: 10px;
@@ -23,6 +25,10 @@ nav ul {
 
 nav ul li {
     margin-left: 0px;
+}
+
+nav ul li.icon {
+    display: none;
 }
 
 nav li a {
@@ -114,6 +120,7 @@ iframe {
     height: 320px;
     position: relative;
     border: 2px solid green;
+    background-color: #222;
 }
 
 .faixa {
@@ -121,7 +128,6 @@ iframe {
     display: none;
     width: 10%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .faixa button {
@@ -227,7 +233,7 @@ div#container-direita {
     overflow: auto;
 }*/
 
-/*************   Fim da áera da animação     **********************/
+/*****************   MEDIA QUERIES     **********************/
 
 /* Para Smartphones: */
 @media only screen and (max-width: 500px){
