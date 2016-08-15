@@ -102,15 +102,32 @@
     <hr>
         
     <section id="videos">
-        <h1>Meus vídeos no YouTube</h1>
+        <h1>Meus vídeos</h1>
+        <h2>Links para assistir no YouTube</h2>
         <ul>
-            <li><a href="https://www.youtube.com/watch?v=5Hfrbl62JgY">Vídeo de 2011</a></li>
-            <li><a href="https://www.youtube.com/watch?v=_dFsXT6cxGY">Voodoo Child Jam</a></li>
-            <li><a href="https://www.youtube.com/watch?v=-HojjNHsje8">Jam com Fernando</a></li>
-            <li><a href="https://www.youtube.com/watch?v=YSHVpgqwFO8">Tentativa de música com Fernando</a></li>
+            <li><a class="video-youtube" href="https://www.youtube.com/watch?v=_dFsXT6cxGY">Voodoo Child Jam</a></li>
+            <li><a class="video-youtube" href="https://www.youtube.com/watch?v=5Hfrbl62JgY">Vídeo de 2011</a></li>
+            <li><a class="video-youtube" href="https://www.youtube.com/watch?v=-HojjNHsje8">Jam com Fernando</a></li>
+            <li><a class="video-youtube" href="https://www.youtube.com/watch?v=YSHVpgqwFO8">Tentativa de música com Fernando</a></li>
         </ul>
-        <iframe src="https://www.youtube.com/embed/_dFsXT6cxGY">
-        </iframe>
+        
+        <div class="embedded-video">
+            <div class="faixa" id="faixa-esquerda"><button id="previous">&lt;&lt;</button></div>
+            <iframe id="video-frame" src="https://www.youtube.com/embed/_dFsXT6cxGY"><!-- ?rel=0&autoplay=1 -->
+            </iframe>
+            <div class="faixa" id="faixa-direita"><button id="next">&gt;&gt;</button></div>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a class="menu-video" title="vídeo anterior" id="back" onclick="mudaVideo(this)">&lt;&lt;</a></li> 
+                <li><a class="menu-video" title="Voodoo Child Jam" onclick="mudaVideo(this)">1</a></li> 
+                <li><a class="menu-video" title="Vídeo de 2011" onclick="mudaVideo(this)">2</a></li>
+                <li><a class="menu-video" title="Jam com Fernando" onclick="mudaVideo(this)">3</a></li>
+                <li><a class="menu-video" title="Tentativa de música com Fernando" onclick="mudaVideo(this)">4</a></li> 
+                <li><a class="menu-video" title="próximo vídeo"id="forth" onclick="mudaVideo(this)">&gt;&gt;</a></li>
+            </ul>
+        </nav>
      
     </section>
         
@@ -158,5 +175,6 @@
 </div>
 	<script src="js/mudaBolinha.js"></script>
 	<script src="js/controleAnimacao.js"></script>
+    <script src="js/controleVideos.js"></script>
 </body>
 </html>
