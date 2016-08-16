@@ -10,9 +10,17 @@ var videosYouTube = document.getElementsByClassName("video-youtube");
 menuVideo[0].style.display = "none";
 var corBtnDesativado = "rgba(0, 0, 0, 0.0)";
 var corBtnAtivo = "rgba(210, 224, 224, 0.6)";
-var margemEsquerda = "30.8%";
+var margemEsquerda = "25%";
 var voodooChild = document.getElementById("voodoo-child");
-voodooChild.style.marginLeft = margemEsquerda;
+if (window.innerWidth > 400) {
+    voodooChild.style.marginLeft = margemEsquerda;
+}
+else if (window.innerWidth >= 320) {
+    voodooChild.style.marginLeft = "20%";
+}
+else {
+    voodooChild.style.marginLeft =  "0";
+}
 voodooChild.style.backgroundColor = "#666666";
 
 telaVideo.onmouseover = function () {
@@ -38,7 +46,12 @@ function btnChangeDisplay() {
     if (pointer === 1) {
         menuVideo[0].style.display = "none";
         menuVideo[menuVideo.length - 1].style.display = "block";
-        voodooChild.style.marginLeft = margemEsquerda;
+        if (window.innerWidth > 400) {
+            voodooChild.style.marginLeft = margemEsquerda;
+        }
+        else if (window.innerWidth >= 320) {
+            voodooChild.style.marginLeft = "20%";
+        }
     }
     else if (pointer === menuVideo.length - 2) {
         menuVideo[0].style.display = "block";
@@ -135,4 +148,14 @@ function passaVideo(botao) {
     btnChangeDisplay();
     manipulaCor();
     marcaVideo();
+}
+
+function testaWindow() {
+    if (window.innerWidth > 400) {
+        alert("width > 400px");
+    }
+    else {
+        alert("width < 400px");
+    }
+    alert("width = " + window.innerWidth + "px");
 }
