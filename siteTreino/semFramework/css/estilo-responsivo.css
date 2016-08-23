@@ -228,7 +228,7 @@ section#jogos h1, section#jogos p{
 	text-align: center;
 }
 
-/*section#animacao {
+section#animacao {
     overflow: auto;
 }
 
@@ -255,13 +255,17 @@ div#container-direita {
 	width: 400px;
 	height: 200px;
 	margin: 10px auto;
+    border: 1px solid black;
 }
 
 
+section#jogos {
+    clear: both;
+}
 
 .clearfix {
-    overflow: auto;
-}*/
+    clear: both;
+}
 
 /*****************   MEDIA QUERIES     **********************/
 
