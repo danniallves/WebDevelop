@@ -389,13 +389,9 @@ section#jogos {
     
     
     /****  Animações  ****/
-    
-    
-    
-    
-    
-    
-    
+    div#container-direita {
+        margin-left : 0px;
+    }
     
     /* fim da aéra das animações */
     
