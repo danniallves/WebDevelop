@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vídeos</title>
+	<link rel="stylesheet" href="../css/estilo-respons.css">
+    <link rel="stylesheet" href="../css/estilo-videos.css">
+</head>
+<body>
+    <header id="header-logo" class="clearfix">
+        <h1 class="offscreen">Site do Guitarra Virtual</h1>
+        <picture class="logo">
+            <source media="(min-width: 750px)" srcset="img/logo_gv-250wid.png">
+            <img src="img/logo_gv-150wid.png" alt="Logo GV">
+        </picture>
+        <nav class="menu-top">
+            <h2 class="offscreen">Menu Topo</h2>
+			<ul>
+                <li><a title="A fazer o link correto">Home</a></li>
+				<li><a href="../escola.html">A Escola</a></li>
+                <li><a href="../Cursos/Cursos/index.html">Cursos</a></li>
+                <li><a>Artigos</a></li>
+				<li><a>Vídeos</a></li>
+                <li><a href="../Dicas/primeiras-dicas.html">Dicas</a></li>
+				<li><a>Serviços</a></li>
+				<li><a>Nossos Alunos</a></li>
+				<li><a>Fale Conosco</a></li>
+            </ul>
+		</nav>
+    </header>
+    <main class="clearfix">
+        <nav class="menu-lateral col-2">
+            <h2 class="offscreen">Menu Lateral</h2>
+			<ul>
+                <li><a title="A fazer o link correto">Home</a></li>
+				<li><a href="escola.html">A Escola</a></li>
+                <li><a href="Cursos/index.html">Cursos</a></li>
+                <li><a>Artigos</a></li>
+				<li><a>Vídeos</a></li>
+                <li><a href="Dicas/primeiras-dicas.html">Dicas</a></li>
+				<li><a>Serviços</a></li>
+				<li><a>Nossos Alunos</a></li>
+				<li><a>Fale Conosco</a></li>
+			</ul>
+		</nav>
+        
+        <div class="conteudo col-8">
+        <h1>Vídeos</h1>
+        <section id="videos-bernardo">
+            <div class="embedded-video">
+                <div class="faixa" id="faixa-esquerda"><button id="previous" onclick="passaVideo(this)">&lt;&lt;</button></div>
+                <iframe id="video-frame" src="https://www.youtube.com/embed/_dFsXT6cxGY?rel=0" allowfullscreen><!-- ?rel=0&autoplay=1 -->
+                </iframe>
+                <div class="faixa" id="faixa-direita"><button id="next" onclick="passaVideo(this)">&gt;&gt;</button></div>
+            </div>
+
+            <nav>
+                <ul class="bottom-menu">
+                    <li><a class="menu-video" title="vídeo anterior" id="back" onclick="mudaVideo(this)">&lt;&lt;</a></li> 
+                    <li id="voodoo-child"><a class="menu-video" title="Voodoo Child Jam" onclick="mudaVideo(this)">1</a></li> 
+                    <li><a class="menu-video" title="Vídeo de 2011" onclick="mudaVideo(this)">2</a></li>
+                    <li><a class="menu-video" title="Jam com Fernando" onclick="mudaVideo(this)">3</a></li>
+                    <li><a class="menu-video" title="Tentativa de música com Fernando" onclick="mudaVideo(this)">4</a></li> 
+                    <li><a class="menu-video" title="próximo vídeo"id="forth" onclick="mudaVideo(this)">&gt;&gt;</a></li>
+                </ul>
+            </nav>    
+        </section>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>Venha tocar por essas bandas</p>
+    </footer>
+    <script src="../js/controleVideos.js"></script>
+</body>
+</html>

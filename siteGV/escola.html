@@ -7,16 +7,21 @@
 	<link rel="stylesheet" href="css/estilo-respons.css">
 </head>
 <body>
-    <header>
+    <header id="header-logo" class="clearfix">
         <h1 class="offscreen">Site do Guitarra Virtual</h1>
+        <picture class="logo">
+            <source media="(min-width: 750px)" srcset="img/logo_gv-250wid.png">
+            <img src="img/logo_gv-150wid.png" alt="Logo GV">
+        </picture>
         <nav class="menu-top">
             <h2 class="offscreen">Menu Topo</h2>
 			<ul>
-				<li><a>A Escola</a></li>
-                <li><a>Cursos</a></li>
+                <li><a title="A fazer o link correto">Home</a></li>
+				<li><a href="escola.html">A Escola</a></li>
+                <li><a href="Cursos/index.html">Cursos</a></li>
                 <li><a>Artigos</a></li>
 				<li><a>Vídeos</a></li>
-                <li><a>Dicas</a></li>
+                <li><a href="#">Dicas</a></li>
 				<li><a>Serviços</a></li>
 				<li><a>Nossos Alunos</a></li>
 				<li><a>Fale Conosco</a></li>
@@ -24,7 +29,7 @@
 		</nav>
     </header>
     <main class="clearfix">
-        <nav class="menu-lateral">
+        <nav class="menu-lateral col-2">
             <h2 class="offscreen">Menu Lateral</h2>
 			<ul>
 				<li><a>A Escola</a></li>
@@ -38,7 +43,7 @@
 			</ul>
 		</nav>
         
-        <div class="conteudo">
+        <div class="conteudo col-8">
         <h1>A Escola</h1>
         
         <section id="quem-somos">

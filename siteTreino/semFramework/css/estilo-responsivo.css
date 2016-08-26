@@ -267,6 +267,24 @@ section#jogos {
     clear: both;
 }
 
+/*#palheta {
+    -webkit-transform: rotateY(120deg);
+    transform: rotateY(120deg);
+}*/
+
+@keyframes giraPalheta {
+    0% {-webkit-transform: rotateY(0deg); transform: rotateY(0deg);}
+    50% {-webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
+    100% {-webkit-transform: rotateY(360deg); transform: rotateY(360deg);}
+}
+
+#palheta {
+    animation-name: giraPalheta;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 5;
+}
+
 /*****************   MEDIA QUERIES     **********************/
 
 /* Para Smartphones: */
