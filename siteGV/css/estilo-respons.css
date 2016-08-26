@@ -44,6 +44,8 @@ footer {
     width: 100%;
 }
 
+a {text-decoration: none;}
+
 nav a {
     text-decoration: none;
     font-size: 1.2em;
@@ -115,7 +117,7 @@ nav ul li a {
     display: none;
 }
 
-.ul-GV li a:before, .ul-GV li h2:before, .ul-GV li h3:before {
+.ul-GV li>a:before, .ul-GV li>h2:before, .ul-GV li>h3:before {
     content: url("../img/icon-palheta-GV-preta-25px.png");
     margin-right: 10px;
 }
