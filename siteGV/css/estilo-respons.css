@@ -44,7 +44,10 @@ footer {
     width: 100%;
 }
 
-a {text-decoration: none;}
+a {
+    text-decoration: none;
+    color: #eeeeee;
+}
 
 nav a {
     text-decoration: none;
