@@ -115,15 +115,13 @@ nav ul li a {
     display: none;
 }
 
-
-
-.ul-GV {
-    list-style-image: url("../img/icon-palheta-GV-preta-25px.png");
+.ul-GV li a:before, .ul-GV li h2:before, .ul-GV li h3:before {
+    content: url("../img/icon-palheta-GV-preta-25px.png");
+    margin-right: 10px;
 }
 
 main {
     background-color: rgba(0, 51, 204, 0.8);
-    width: 100%;
     padding: 3.5%;
     position: relative;
 }
