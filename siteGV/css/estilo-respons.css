@@ -121,7 +121,7 @@ nav ul li a {
 }
 
 main {
-    background-color: rgba(0, 51, 204, 0.8);
+    background-color: rgba(0, 0, 153, 0.8);
     padding: 3.5%;
     position: relative;
 }
@@ -159,6 +159,27 @@ section:last-child {
 
 #destaques h2{
     font-weight: 600;
+}
+
+#guitarrista {
+    position: relative;
+    float: right;
+    bottom: -10px;
+    right: -10px;
+    display: none;
+}
+
+footer {
+    padding: 10px;
+    background-color: rgba(128, 255, 0, 0.7);
+}
+
+footer h1{
+    font-size: 1.4em;
+}
+
+footer p {
+    text-indent: 0;
 }
 
 @media only screen and (min-width: 640px) {
@@ -231,5 +252,14 @@ section:last-child {
         width: 90%;
         margin: auto;
         padding: 0;
+    }
+    
+    footer {
+        width: 90%;
+        margin: auto;
+    }
+    
+    #guitarrista {
+        display: inline-block;
     }
 }
