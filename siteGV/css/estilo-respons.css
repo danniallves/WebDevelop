@@ -126,7 +126,7 @@ nav ul li a {
 }
 
 main {
-    background-color: rgba(0, 0, 153, 0.8);
+    background-color: rgba(0, 0, 90, 0.85);
     padding: 3.5%;
     position: relative;
 }
@@ -143,6 +143,7 @@ p {
 .conteudo h2 {
     font-size: 1.6em;
     margin-bottom: 10px;
+    color: rgb(134, 179, 0);
 }
 
 .conteudo h3 {
@@ -176,7 +177,8 @@ section:last-child {
 
 footer {
     padding: 10px;
-    background-color: rgba(128, 255, 0, 0.7);
+    background-color: rgba(134, 179, 0, 0.85);
+    color: #fff;
 }
 
 footer h1{
@@ -231,10 +233,10 @@ footer p {
         vertical-align: top;
         margin-left: 5px;
     }
-
-    .menu-lateral ul li:before{
+    
+    /*.menu-lateral ul li:before{
         content: url("../img/icon-palheta-GV-azul-25px.png");
-    }
+    }*/
     
     .menu-lateral li {
         margin-left: -30px;
@@ -243,6 +245,24 @@ footer p {
     
     menu-lateral li:first-child {
         margin-top: 0;
+    }
+    
+     @keyframes giraPalheta {
+        0% {-webkit-transform: rotateY(0deg); transform: rotateY(0deg);}
+        50% {-webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
+        100% {-webkit-transform: rotateY(360deg); transform: rotateY(360deg);}
+    }
+
+    .palheta-GV-azul {
+        display: inline-block;
+        background: url("../img/icon-palheta-GV-azul-25px.png");
+        height: 25px;
+        width: 25px;
+        animation-name: giraPalheta;
+        animation-duration: 0.8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-play-state: paused;
     }
     
     
