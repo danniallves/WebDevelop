@@ -278,9 +278,9 @@ section#jogos {
     100% {-webkit-transform: rotateY(360deg); transform: rotateY(360deg);}
 }
 
-#palheta {
+#palheta:hover {
     animation-name: giraPalheta;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: 5;
 }
