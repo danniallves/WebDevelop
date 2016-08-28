@@ -374,3 +374,8 @@ footer p {
         display: inline-block;
     }
 }
+@media only screen and (min-width: 1367px) {
+    body {
+        background-image: url("../img/fundo1700px.jpg");
+    }
+}
