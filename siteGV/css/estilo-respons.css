@@ -116,6 +116,75 @@ nav ul li a {
     margin-left: 10px;
 }
 
+/* *************   Menu Responsivo  ****************** */
+
+#topmenu-holder {
+    width: 100%;
+    height: 40px;
+    clear: right;
+    background-color: rgba(2, 2, 2, 0.8);
+}
+
+.nav-top {
+    clear: right;
+    position: absolute;
+    z-index: 9999999;
+    width: 100%;
+    top: 109px;
+}
+
+.menu-responsivo {
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+.menu-responsivo li {
+    display: none;
+    padding-left: 5px;
+}
+
+.menu-responsivo li.icon {
+    display: inline-block;
+    height: 40px;
+    padding: 5px 15px;
+}
+
+.menu-show li:not(:first-child) {
+    display: block;
+    width: 50%;
+    background-color: rgba(0, 0, 90, 0.95);
+    /*background-color: rgba(134, 179, 0, 0.95);*/
+}
+
+@media only screen and (min-width: 430px) {
+    .menu-show li:not(:first-child) {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .menu-show li:not(:first-child) {
+        width: 30%;
+    }
+}
+
+.menu-show li:last-child {
+    padding-bottom: 20px;
+}
+
+.menu-show li a {
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.menu-show li:not(:first-child) > a:before {
+    content: url("../img/icon-palheta-GV-azul-25px.png");
+    margin-right: 10px;
+} 
+
+/*   ************************************************* */
+
 .menu-lateral {
     display: none;
 }
@@ -190,6 +259,16 @@ footer p {
 }
 
 @media only screen and (min-width: 640px) {
+    body {
+        background-image: url("../img/fundo900px.jpg");
+    }
+    
+    .nav-top {
+        top: 180px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
     
     /* grids */
 .col-1 {width: 8.33%;}
@@ -210,6 +289,10 @@ footer p {
     }
     
     .menu-top {
+        display: none;
+    }
+    
+    #topmenu-holder, .nav-top {
         display: none;
     }
     
