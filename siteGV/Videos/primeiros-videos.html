@@ -11,21 +11,25 @@
     <header id="header-logo" class="clearfix">
         <h1 class="offscreen">Site do Guitarra Virtual</h1>
         <picture class="logo">
-            <source media="(min-width: 750px)" srcset="../img/logo_gv-250wid.png">
+            <source media="(min-width: 640px)" srcset="../img/logo_gv-250wid.png">
             <img src="../img/logo_gv-150wid.png" alt="Logo GV">
         </picture>
-        <nav class="menu-top">
-            <h2 class="offscreen">Menu Topo</h2>
-			<ul>
+        
+        <!--Menu reponsivo-->
+        <div class="placeholder" id="topmenu-holder"></div>
+        <nav class="nav-top">
+            <h2 class="offscreen">Menu Responsivo de Topo</h2>
+			<ul class="menu-responsivo" id="ul-menu-top">
+                <li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
                 <li><a href="../indexNew.html">Home</a></li>
 				<li><a href="../escola.html">A Escola</a></li>
                 <li><a href="../Cursos/index.html">Cursos</a></li>
                 <li><a href="../Artigos/primeiros-artigos.html">Artigos</a></li>
-				<li><a href="primeiros-videos.html">Vídeos</a></li>
+				<li><a href="../Videos/primeiros-videos.html">Vídeos</a></li>
                 <li><a href="../Dicas/primeiras-dicas.html">Dicas</a></li>
-				<li><a>Serviços</a></li>
-				<li><a>Nossos Alunos</a></li>
-				<li><a>Fale Conosco</a></li>
+				<li><a title="link inativo">Serviços</a></li>
+				<li><a title="link inativo">Nossos Alunos</a></li>
+				<li><a title="link inativo">Fale Conosco</a></li>
             </ul>
 		</nav>
     </header>
@@ -39,9 +43,9 @@
                 <li><div class="palheta-GV-azul"></div><a class="a-lateral" href="../Artigos/primeiros-artigos.html" onmouseover="giraPalheta(this)" onmouseout="paraPalheta(this)">Artigos</a></li>
 				<li><div class="palheta-GV-azul"></div><a class="a-lateral" href="../Videos/primeiros-videos.html" onmouseover="giraPalheta(this)" onmouseout="paraPalheta(this)">Vídeos</a></li>
                 <li><div class="palheta-GV-azul"></div><a class="a-lateral" href="../Dicas/primeiras-dicas.html" onmouseover="giraPalheta(this)" onmouseout="paraPalheta(this)">Dicas</a></li>
-				<li><div class="palheta-GV-azul"></div><a>Serviços</a></li>
-				<li><div class="palheta-GV-azul"></div><a>Nossos Alunos</a></li>
-				<li><div class="palheta-GV-azul"></div><a>Fale Conosco</a></li>
+				<li><div class="palheta-GV-azul"></div><a title="link inativo">Serviços</a></li>
+				<li><div class="palheta-GV-azul"></div><a title="link inativo">Nossos Alunos</a></li>
+				<li><div class="palheta-GV-azul"></div><a title="link inativo">Fale Conosco</a></li>
 			</ul>
 		</nav>
         
@@ -92,5 +96,6 @@
     </footer>
     <script src="../js/controleVideos.js"></script>
     <script src="../js/animations.js"></script>
+    <script src="../js/responsive.js"></script>
 </body>
 </html>
