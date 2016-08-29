@@ -27,7 +27,8 @@ html, body {
 body {
     font: .8125em/1.5 Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
     background-image: url("../img/fundoMenor.jpg");
-    background-repeat: repeat-y;
+    /*background-repeat: repeat-y;*/
+    background-position: center top;
     color: #eeeeee;
 }
 
