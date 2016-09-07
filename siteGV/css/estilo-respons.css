@@ -193,7 +193,7 @@ nav ul li a {
     display: none;
 }
 
-.ul-GV li>a:before, .ul-GV li>h2:before, .ul-GV li>h3:before {
+.ul-GV li>a:before, .ul-GV li>h2:before, .ul-GV li>h3:before, .h-GV:before {
     content: url("../img/icon-palheta-GV-preta-25px.png");
     margin-right: 10px;
 }
@@ -246,6 +246,12 @@ section:last-child {
     bottom: -10px;
     right: -10px;
     display: none;
+}
+
+iframe.dicas {
+    width: 90%;
+    height: 315px;
+    margin: 30px auto;
 }
 
 footer {
@@ -373,6 +379,10 @@ footer p {
     
     #guitarrista {
         display: inline-block;
+    }
+    
+    iframe.dicas {
+        width: 560px;
     }
 }
 @media only screen and (min-width: 1367px) {
