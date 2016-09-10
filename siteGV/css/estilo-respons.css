@@ -379,6 +379,9 @@ footer p {
     
     #guitarrista {
         display: inline-block;
+        position: absolute;
+        right: -20px;
+        bottom: -7px;
     }
     
     iframe.dicas {
