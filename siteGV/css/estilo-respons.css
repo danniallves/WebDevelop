@@ -25,7 +25,7 @@ html, body {
 body {
     /*font: .8125em/1.5 Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;*/
     font-size: .9em;
-    font-family: 'Comic Sans MS', 'Comic Sans', 'Monotype Corsiva','Lucida Handwriting', 'URW Chancery L', 'Kavoon', 'cursive';
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Kavoon', 'Monotype Corsiva','Lucida Handwriting', 'URW Chancery L', 'cursive';
     background-image: url("../img/fundoMenor.jpg");
     /*background-repeat: repeat-y;*/
     background-position: center top;
