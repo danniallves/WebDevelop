@@ -24,7 +24,8 @@ html, body {
 
 body {
     /*font: .8125em/1.5 Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;*/
-    font: 1em cursive;
+    font-size: .9em;
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Monotype Corsiva','Lucida Handwriting', 'URW Chancery L', 'cursive';
     background-image: url("../img/fundoMenor.jpg");
     /*background-repeat: repeat-y;*/
     background-position: center top;
@@ -216,6 +217,8 @@ p {
 .conteudo h1 {
     font-size: 2em;
     font-family: 'Kavoon', cursive;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .conteudo h2, h3, a {
@@ -224,6 +227,7 @@ p {
 
 .conteudo h2 {
     font-size: 1.8em;
+    font-weight: 600;
     margin-bottom: 10px;
     color: rgb(134, 179, 0);
 }
@@ -254,10 +258,6 @@ section {
 
 section:last-child {
     margin-bottom: 5%;
-}
-
-#destaques h2{
-    font-weight: 600;
 }
 
 #guitarrista {
