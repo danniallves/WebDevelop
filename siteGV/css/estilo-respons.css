@@ -403,6 +403,7 @@ footer p {
     
     .conteudo {
         display: block;
+        position: relative;
         float: left;
         height: 100%;
         margin-top: 0;
@@ -426,8 +427,33 @@ footer p {
         bottom: -7px;
     }
     
+    section {
+        z-index: 99;
+    }
+    
     iframe.dicas {
         width: 560px;
+        z-index: 999;
+        background-color: black;
+    }
+    
+    div#televisao {
+        margin: 30px 40px;
+        position: relative;
+        width: 585px;
+    }
+    
+    #iframe-tv {
+        position: absolute;
+        z-index: 99999;
+        top: -20px;
+        left: 11px;
+    }
+    
+    #tv-slim {
+        height: 375px;
+        width: 583px;
+        z-index: 1;
     }
 }
 @media only screen and (min-width: 1367px) {
