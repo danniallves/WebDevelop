@@ -310,6 +310,12 @@ footer p {
     color: rgb(230, 255, 242);
 }
 
+#televisao {
+    display: none;
+}
+
+/*  ***************   MEDIA QUERIES    *************************************************************************/
+
 @media only screen and (min-width: 640px) {
     body {
         background-image: url("../img/fundo900px.jpg");
@@ -438,6 +444,7 @@ footer p {
     }
     
     div#televisao {
+        display: block;
         margin: 30px 40px;
         position: relative;
         width: 585px;
