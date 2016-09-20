@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@import 'https://fonts.googleapis.com/css?family=Courgette|Kavoon';
+@import 'https://fonts.googleapis.com/css?family=Unkempt';
 
 /*
 font-family: 'Courgette', cursive;
@@ -23,9 +23,10 @@ html, body {
 }
 
 body {
-    /*font: .8125em/1.5 Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;*/
+    font-family:  Calibri, Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    /*font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, 'Times New Roman', Times, serif;*/
     font-size: .9em;
-    font-family: 'Comic Sans MS', 'Comic Sans', 'Kavoon', 'Monotype Corsiva','Lucida Handwriting', 'URW Chancery L', 'cursive';
+    /*font-family: 'Comic Sans MS', 'Comic Sans', 'Kavoon', 'Monotype Corsiva','Lucida Handwriting', 'URW Chancery L', 'cursive';*/
     background-image: url("../img/fundoMenor.jpg");
     /*background-repeat: repeat-y;*/
     background-position: center top;
@@ -106,16 +107,8 @@ nav ul li a {
     font-size: 1.4em;
 }
 
-.menu-top {
-    clear: right;
-}
-
-.menu-top ul li {
-    display: inline-block;
-}
-
-.menu-top ul li a {
-    margin-left: 10px;
+nav {
+    font-family: 'Comic Sans MS', 'Comic Sans';
 }
 
 /* *************   Menu Responsivo  ********************************************************************************************** */
@@ -210,20 +203,15 @@ p {
     text-indent: 2em;
 }
 
-/*.conteudo {
-    font-family: fantasy, cursive;
-}*/
+.conteudo h1, h2, h3, h4{
+    font-family: 'Comic Sans MS', 'Comic Sans';
+}
 
 .conteudo h1 {
     font-size: 2em;
-    font-family: 'Kavoon', cursive;
     margin-top: 10px;
     margin-bottom: 20px;
 }
-
-/*.conteudo h2, h3, a {
-    font-family: cursive;
-}*/
 
 .conteudo h2 {
     font-size: 1.8em;
@@ -238,7 +226,7 @@ p {
 }
 
 .conteudo p {
-    font-family: 'Courgette', cursive;
+    /*font-family: 'Courgette', cursive;*/
     font-size: 1.4em;
 }
 
@@ -278,6 +266,7 @@ footer {
     padding: 10px;
     background-color: rgba(134, 179, 0, 0.85);
     color: #fff;
+    font-family: 'Comic Sans MS', 'Comic Sans';
 }
 
 footer h1{
