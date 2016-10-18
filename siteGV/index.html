@@ -2,62 +2,123 @@
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Site GV Beta</title>
+	<title>Guitarra Virtual Em Reforma</title>
 	<link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .box {
+            position: relative;
+            margin: 50px auto;
+            width: 400px
+        }
+
+        .gear {
+            width: 200px;
+            height: 200px;
+            background: url(img/gear-svg-fundo-transparente.png);
+            background-size: contain;
+            position: relative;
+        }
+
+        @keyframes giroAntiHorario{
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes giroHorario{
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .horario{
+            animation: giroHorario 8s linear infinite;  
+            animation-play-state: running;
+            float: left;
+            position: relative;
+            /*transform: rotate(5deg);*/
+        }
+
+        .antihorario {
+            animation: giroAntiHorario 8s linear infinite;
+            animation-play-state: running;
+            float: right;
+            position: relative;
+            left: -15px;
+            top: -18px;
+            /*transform: rotate(5deg);*/
+        }
+        
+        button {
+            position: relative;
+            margin: 20px 42.5% 0px;
+            width: 100px;
+            height: 40px;
+            cursor: pointer;
+            font: 1.5em "Comic Sans MS", "Comic Sans", "Palatino", "cursive";
+            border-radius: 7px;
+            border: none;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("aside").css("height", $(".conteudo").css("height"));
+            $("button").click(function() {
+                if ($(this).text() === "Girar") {
+                    $(".horario").css("animation-play-state", "running");
+                    $(".antihorario").css("animation-play-state", "running");
+                    $(this).text("Parar");
+                }
+                else if ($(this).text() === "Parar") {
+                    $(".horario").css("animation-play-state", "paused");
+                    $(".antihorario").css("animation-play-state", "paused");
+                    $(this).text("Girar");
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-<div class="conteudo">
-	<header>
-		<nav class="menu">
-			<ul>
-				<li><a>A Escola</a></li>
-				<li><a>Nossos Cursos</a></li>
-				<li><a>Cursos Online</a></li>
-				<li><a>Oficinas em Vídeo</a></li>
-				<li><a>Serviços em Domicílio</a></li>
-				<li><a>Nossos Alunos</a></li>
-				<li><a>Fale Conosco</a></li>
-			</ul>
-            <a href="indexNew.html"><h3>Ir para o novo site</h3></a>
-            <a href="adminSite.html"><h3>Ir para área de administração</h3></a>
-		</nav>
+    <header>
+         <h1 class="offscreen">Site do Guitarra Virtual</h1>
+        <picture class="logo">
+            <source media="(min-width: 640px)" srcset="img/logo_gv-250wid.png">
+            <img src="img/logo_gv-150wid.png" alt="Logo GV">
+        </picture>
+        <nav class="topnav"></nav>
+    </header>
+    <main class="clearfix">
+        <aside class="anterior col-2">
+            
+        </aside>
+        <div class="conteudo col-8">
+            <noscript>Para completa funcionalidade deste site é necessário habilitar o JavaScript. Aqui estão as <a href="http://www.enable-javascript.com/pt/" target="_blank">instruções de como habilitar o JavaScript no seu navegador</a>.</noscript>
+            
+            <h1>O site está em reforma</h1>
+            <section>
+                <p>Estamos trabalhando para fazer um site interativo e cheio de novidades!</p>
+                <div class="box">
+                    <div class="gear horario"></div>
+                    <div class="gear antihorario"></div>
+                </div>
+                <button>Parar</button>
+            </section>
+            
+        </div>
+        <aside class="posterior col-2"><img id="guitarrista" src="img/guitarrista150.png"></aside>
         
-        <div class="container-logo">
-		  <img id="logo" src="img/logo_gv-250wid.png">
-        </div>
-	</header>
-    
-    <section id="ultimas-noticias">
-        <h1>Últimas Notícias</h1>
-        <div id="area-noticias">
-        <section class="noticias">
-            <h1>Notícia 1</h1>
-        </section>
-        <hr>
-        <section class="noticias">
-            <h1>Notícia 2</h1>
-        </section>
-        </div>
-    </section>
-    
-    <section class="conheca-escola">
-        <h1>Conheça a nossa escola</h1>
-        <div class="caixa">
-
-        </div>
-    </section>
-    
-	<div id="container-guitarrista">
-	   <img id="guitarrista" src="img/guitarrista150.png">
-    </div>
-    
+    </main>
     <footer>
-        <div class="info-inst">
-            <h1>Venha tocar por essas bandas</h1>
-            <p>Rua Figueiredo Magalhães, 286 - sobreloja 201 - Copacabana <span id="telefone"><img src="img/red_phone-25px.png"> 3042-0950</span></p>
-        </div>
+        <h1>Venha tocar por essas bandas</h1>
+        <p>Rua Figueiredo Magalhães, 286 - sobreloja 201 - Copacabana <span id="telefone"><img src="img/red_phone-25px.png"> 3042-0950</span></p>
     </footer>
-</div>
-	
 </body>
 </html>
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam cursus dolor ac velit lacinia, efficitur mollis urna dictum. Phasellus odio quam, rutrum vel pellentesque a, lacinia nec enim. Donec lobortis congue orci ac luctus. Quisque ullamcorper nibh ultricies, tempor ante eget, tincidunt ipsum. Morbi nibh justo, maximus molestie metus ut, egestas efficitur nisl. Pellentesque luctus eleifend nibh eget semper. Etiam pellentesque sollicitudin dui, et bibendum nisi fringilla egestas. Pellentesque leo nisi, ultrices egestas sagittis at, ultrices vel quam. Vestibulum porta purus a dolor finibus vehicula. Praesent lacinia vulputate velit, at tristique diam mattis nec. Praesent condimentum volutpat ligula, non vulputate enim euismod sed. Sed dictum eros eget magna lobortis venenatis. Vivamus dictum sed dolor eu fringilla. Nunc hendrerit convallis lectus, vitae egestas sapien posuere quis. Praesent sed fermentum dolor. Donec tincidunt tempor ultrices.</p>
+            <p>Praesent tristique ligula eget ex tincidunt finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consequat sed purus sed maximus. Sed varius odio vel ornare tristique. Quisque vel pulvinar dui. Fusce nec sapien non ipsum luctus porta. Etiam molestie vulputate velit, accumsan euismod orci porttitor nec. Pellentesque eu accumsan mauris, a maximus orci. Pellentesque non condimentum neque. Praesent dolor nisi, placerat vitae hendrerit sit amet, feugiat cursus mauris.</p>
+            <p>Aenean nec tempor neque. Duis in sapien vel dui porta sagittis. Mauris accumsan posuere nunc et viverra. Cras sed libero ac odio mollis malesuada nec ut neque. Morbi vitae facilisis metus. Donec nisi arcu, varius in elit at, malesuada pellentesque ligula. Suspendisse tempus hendrerit quam, suscipit lobortis augue fringilla in. Donec finibus lobortis justo vel vehicula. Aliquam rhoncus efficitur leo, nec placerat justo ultricies eget. Praesent tincidunt metus a nunc consequat sagittis.</p>
+            <p>Nunc scelerisque consectetur dapibus. Maecenas malesuada purus sed orci varius, in suscipit orci malesuada. Quisque vulputate id elit suscipit imperdiet. Quisque ultricies tristique eros, lacinia vestibulum lorem luctus a. Etiam varius lacus vitae ante bibendum, eget mattis neque consectetur. Nam scelerisque, lacus a scelerisque suscipit, odio ipsum sollicitudin felis, ut malesuada nunc neque at felis. Curabitur rhoncus scelerisque velit sit amet euismod. Donec tincidunt erat eget tortor viverra, eu placerat turpis egestas. Integer blandit porta venenatis. Suspendisse vestibulum tristique lectus ut aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed semper sollicitudin faucibus. Suspendisse vitae mauris at mauris luctus euismod quis viverra dui.</p>
+            <p>Fusce sit amet pellentesque urna. Maecenas id purus at leo vulputate blandit. Proin laoreet odio ut porttitor iaculis. Integer sed maximus elit. Aliquam eu mi aliquet, suscipit justo sit amet, commodo nibh. Vivamus a semper ante. Sed viverra tincidunt iaculis. Donec varius lacus nec placerat venenatis. Suspendisse et ullamcorper felis, id bibendum arcu.</p>-->

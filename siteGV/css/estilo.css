@@ -1,167 +1,555 @@
+@charset "utf-8";
+
+@import 'https://fonts.googleapis.com/css?family=Unkempt';
+
+/*
+font-family: 'Courgette', cursive;
+font-family: 'Kavoon', cursive;
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:100.01%;
+}
+
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,hr,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfont,thead,tr,th,td{padding:0;margin:0;border:none;outline:none;vertical-align:baseline;font-family:inherit;font-size:100%;}dfn,i,cite,var,address,em{font-style:normal;}th,b,strong,h1,h2,h3,h4,h5,h6{font-weight:normal;}textarea,input,select{font-family:inherit;font-size:1em;}blockquote,q{quotes:none;}q:before,q:after,blockquote:before,blockquote:after{content:'';content:none;}ol,ul{list-style:none;}ins{text-decoration:none;}del{text-decoration:line-through;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;}:focus{outline:none;}
+
+html, body {
+    height:100%;
+}
+
 body {
-	background-image: url("../img/fundo1366.jpg");
-	background-repeat: no-repeat;
-	height: 1200px;
-	min-height: 700px;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    /*font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, 'Times New Roman', Times, serif;*/
+    font-size: .9em;
+    background-image: url("../img/fundoMenor.jpg");
+    background-position: center top;
+    color: #eeeeee;
+    background-color: rgb(0, 0, 90);
 }
 
-.conteudo {
-	width: 70%;
-	min-height: 50%;
-	position: relative;
-	background-color: rgba(0, 32, 128, 0.80);
-	margin: auto;
-	margin-top: 10%;
-	padding: 2% 5%;
-	border-radius: 2.5%;
-    color: #ffffff;
+header, 
+nav, 
+section, 
+article, 
+aside, 
+footer {
+    display: block;
 }
 
-a:link {
-	color: #ffffff;
+[class*="col-"] {
+    width: 100%;
 }
 
-a:visited {
-	color: #e6e6e6;
+a {
+    text-decoration: none;
+    color: #eeeeee;
 }
 
-a:focus {
-	background-color: #66e0ff;
-	color: #bfbfbf;
+nav a {
+    text-decoration: none;
+    font-size: 1.2em;
 }
 
-a:hover {
-	color: #cccccc;
+nav a:link, a:visited {
+    color: #eeeeee;
 }
 
-a:active {
-	color: #ff0000;
+nav a:hover {
+    color: #cecece;
 }
 
-/* *********   Área de definição da navegação  ************  */
+nav a:active {
+    color: #888888;
+}
+
+header {
+    position: relative;
+    z-index: 999;
+    width: 100%;
+    height: 170px;
+    top: 0px;
+}
+
+/* Clearfix hack */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.offscreen
+{
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+picture{
+    display: inline-block;
+    width: auto;
+}
+
+.logo {
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+/*nav ul li a {
+    font-size: 1.4em;
+}
+
+nav {
+    font-family: 'Comic Sans MS', 'Comic Sans';
+}*/
+
+/* *************   Menu Responsivo  ********************************************************************************************** */
+
+/*.menu li:not(:first-child) > a:before {
+    content: url("../img/icon-palheta-GV-azul-25px.png");
+    margin-right: 10px;
+} */
+
+nav.topnav {
+  background-color: #808080; /* cinza */
+  background-color: rgba(134, 179, 0, 0.85); /* verde */
+  position: absolute;
+  padding: 0;
+  height: 40px;
+  width: 100%;
+  bottom: 0px;
+}
+
+/* unvisited link */
+.topnav a:link {
+    color: #fff;
+}
+
+/* visited link */
+.topnav a:visited {
+    color: #fff;
+}
+
+/* mouse over link */
+.topnav a:hover {
+    color: #bbb;
+}
+
+/* selected link */
+.topnav a:active {
+    color: #dedede;
+}
 
 nav ul {
-	/*border: 2px solid #cccccc;*/
-	width: 130%;
-	margin-left: -15%;
-	margin-top: -5%;
-	margin-bottom: 3%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
 }
 
-nav ul li{
-	list-style-type: none;
-	display: inline-block;
-	color: #ffffff;
-	color: #000000;
-	padding: .75em;
+.menu {
+  color: #eee;
+  text-align: left;
+  width: 40px;
 }
 
-nav ul li a {
-	background-color: #88cc00;
-	padding: .5em;
-	border-radius: .5em;
-	font-size: 1.2em;
+.menu li:first-child {
+  padding-top: 5px;
+  padding-left: 15px;
+  height: 40px;
+  width: 50px;
+  font-size: 1.2em;
 }
 
-nav ul li a:hover {
-	color: #ffffff;
+.menu li:not(:first-child) {
+  display: none;
+  padding-top: 10px;
+  padding-left: 5px;
+  height: 50px;
+/*  background-color: rgba(0, 0, 153, 0.8); /* azul */
+  background-color: rgba(134, 179, 0, 0.9); /* verde */
+  font-size: 1em;
+  width: 200px;
 }
 
-nav ul li a:active {
-	color: #cecece;
+.menu li a {
+  text-decoration: none;
+  color: #eee;
 }
 
-/*  *****  Fim da área de navegação  ***************  */
+#menu-icon {
+  cursor: pointer;
+}
 
-div#container-guitarrista {
-    position: absolute;
-    right: -5%;
-    bottom: -3%;
-    width: 15%;
-    height: 15*(255/150)%;
+.area-login {
+  display: inline-block;
+  float: right;
+  height: 100%;
+}
+
+.area-login > a {
+  line-height: 40px;
+  height: 40px;
+  padding: 5px 15px;
+  font-size: 1.2em;
+}
+
+/* unvisited link */
+.area-login > a:link {
+    color: #333;
+}
+
+/* visited link */
+.area-login > a:visited {
+    color: #333;
+}
+
+/* mouse over link */
+.area-login > a:hover {
+    color: #bbb;
+}
+
+/* selected link */
+.area-login > a:active {
+    color: #dedede;
+}
+
+.area-login > a {
+    color: #333;
+    cursor: pointer;
+}
+
+.area-login > a:last-child {
+  border-left: 2px solid #777;
+}
+
+.login {
+    display: none;
+    top: 40px !important;
+}
+
+.login fieldset label {
+    margin-left: 0px !important;
+    font-size: 1.1em;
+}
+
+/*   ************************************************************************************************************************ */
+
+.menu-lateral {
+    display: none;
+}
+
+.ul-GV li>a:before, .ul-GV li>h2:before, .ul-GV li>h3:before, .h-GV:before {
+    content: url("../img/icon-palheta-GV-preta-25px.png");
+    margin-right: 10px;
+}
+
+main {
+    background-color: rgba(0, 0, 90, 0.85);
+    padding: 3.5%;
+    position: relative;
+}
+
+p {
+    font-size: 1.2em;
+    text-indent: 2em;
+}
+
+.conteudo h1, h2, h3, h4{
+    font-family: 'Comic Sans MS', 'Comic Sans';
+}
+
+.conteudo h1 {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.conteudo h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: rgb(134, 179, 0);
+}
+
+.conteudo h3 {
+    font-size: 1.6em;
+    margin-top: 10px;
+}
+
+.conteudo p {
+    /*font-family: 'Courgette', cursive;*/
+    font-size: 1.4em;
+}
+
+.link-destaque {
+    font-family: 'Unkempt';
+    margin-left: 3px;
+    color: rgb(230, 255, 242);
+}
+
+section:first-child {
+    margin-top: 0;
+}
+
+section {
+    margin-top: 5%;
+}
+
+section:last-child {
+    margin-bottom: 5%;
+}
+
+section:last-of-type {
+    margin-bottom: 5%;
 }
 
 #guitarrista {
     position: relative;
-    width: 100%;
-    height: 100%;
+    float: right;
+    bottom: -10px;
+    right: -10px;
+    display: none;
 }
 
-div.container-logo {
-    width: 25%;
-    height: 25(174/250)%;
-    margin: auto;
+iframe.dicas {
+    width: 90%;
+    height: 315px;
+    margin: 30px auto;
 }
 
-#logo {
-    height: 100%;
-    width: 100%;
+aside {
+    display: none;
 }
-
-section.conheca-escola {
-    margin-bottom: 3%;
-}
-
-section#ultimas-noticias {
-    margin-bottom: 3%;
-    width: 60%;
-    border-right: 2px dotted black;
-}
-
-div#area-noticias {
-    background-color: white;
-}
-
-div.caixa {
-    width: 50%;
-    height: 100px;
-    background-color: white;
-}
-
-
-/*   ***********  Área do rodapé  ***************************8******  */
 
 footer {
-    bottom: -7.5%;
-    width: 100%;
-    height: 10%;
-    position: absolute;
+    padding: 10px;
+    background-color: rgba(134, 179, 0, 0.85);
+    color: #fff;
+    font-family: 'Comic Sans MS', 'Comic Sans';
 }
 
-
-div.info-inst {
-    position: relative;
-    margin-top: 1%;
+footer h1{
+    font-size: 1.4em;
 }
 
-.info-inst {
-    background-color: #88cc00;
-    width: 80%;
-    padding: 0px;
+footer p {
+    text-indent: 0;
 }
 
-.info-inst h1 {
-    font-size: 2em;
-    margin-bottom: -1%;
-    margin-top: -.5%;
-    padding-left: 5%;
+.equipe-GV li p{
+    text-indent: 0;
 }
 
-.info-inst p {
-    font-size: 1.2em;
-    margin-top: 0px;
-    margin-bottom: -.5%;
-    padding-left: 5%;
+.equipe-GV li {
+    margin-top: 20px;
 }
 
-.info-inst span#telefone {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-left: 2.5%;
+.membro-GV , .estagiario-GV {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, 'Times New Roman', Times, serif;
+    font-size: 1em;
 }
 
-.info-inst span#telefone img {
-    display: inline;
-    vertical-align: center;
+.membro-GV {
+    color: rgb(230, 255, 242); 
+    display: inline-block;
+    margin-right: 3px;
+    font-size: 1.1em;
 }
 
+#televisao {
+    display: none;
+}
+
+#div-left {
+    display: none;
+}
+/*  ***************   MEDIA QUERIES    *************************************************************************/
+
+@media only screen and (min-width: 640px) {
+    body {
+        background-image: url("../img/fundo900px.jpg");
+    }
+    
+    .nav-top {
+        top: 180px;
+    }
+    
+    header {
+        height: 240px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    
+    #div-left {
+        display: block;
+    }
+    
+    /* grids */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+    
+    body {
+        background-image: url("../img/fundo1366.jpg");
+    }
+    
+    header {
+        height: 240px;
+        width: 92%;
+        /*left: 4%;
+        right: 4%;*/
+        margin: 0 auto;
+       /* margin-bottom: -10px; */
+    }
+
+    .logo {
+        float: none;
+        display: block;
+        width: 250px;
+        margin: auto;
+        margin-top: 10px;
+    }
+    
+    .menu-lateral {
+        display: block;
+        float: left;
+        height: 100%;
+    }
+    
+    .menu-lateral ul li a {
+        padding-left: 5px;
+        vertical-align: top;
+        margin-left: 5px;
+    }
+    
+    .menu-lateral li {
+        margin-left: -30px;
+        margin-top: 10px;
+    }
+    
+    menu-lateral li:first-child {
+        margin-top: 0;
+    }
+    
+     @keyframes giraPalheta {
+        0% {-webkit-transform: rotateY(0deg); transform: rotateY(0deg);}
+        50% {-webkit-transform: rotateY(180deg); transform: rotateY(180deg);}
+        100% {-webkit-transform: rotateY(360deg); transform: rotateY(360deg);}
+    }
+
+    .palheta-GV-azul {
+        display: inline-block;
+        background: url("../img/icon-palheta-GV-azul-25px.png");
+        height: 25px;
+        width: 25px;
+        animation-name: giraPalheta;
+        animation-duration: 0.8s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-play-state: paused;
+    }
+    
+    .conteudo {
+        display: block;
+        position: relative;
+        height: 100%;
+        margin-top: 0;
+        /*margin: auto;*/
+        float: left;
+    }
+    
+    main {
+        width: 92%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    aside {
+        display: block;
+        position: relative;
+        min-height: 500px;
+        margin-top: 0;
+    }
+    
+    aside.anterior {
+        float: left;
+    }
+    
+    aside.posterior {
+        float: right;
+    }
+    
+    footer {
+        width: 92%;
+        margin: 0 auto 20px;
+        /*margin-bottom: 20px;*/
+    }
+    
+    #guitarrista {
+        display: inline-block;
+        position: absolute;
+        right: -20px;
+        bottom: -7px;
+    }
+    
+    section {
+        z-index: 99;
+    }
+    
+    iframe.dicas {
+        width: 560px;
+        z-index: 999;
+        background-color: black;
+    }
+    
+    div#televisao {
+        display: block;
+        margin: 30px 40px;
+        position: relative;
+        width: 585px;
+    }
+    
+    #iframe-tv {
+        position: absolute;
+        z-index: 99999;
+        top: -20px;
+        left: 11px;
+    }
+    
+    #tv-slim {
+        height: 375px;
+        width: 583px;
+        z-index: 1;
+    }
+}
+@media only screen and (min-width: 1367px) {
+    body {
+        background-image: url("../img/fundo1700px.jpg");
+    }
+}

@@ -285,18 +285,16 @@ footer p {
     margin-top: 20px;
 }
 
-.membro-GV {
-    font-family: 'Playball', cursive;
-    color: rgb(230, 255, 242); 
-    font-size: 1.3em;
-    display: inline-block;
-    margin-right: 3px;
+.membro-GV , .estagiario-GV {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, 'Times New Roman', Times, serif;
+    font-size: 1em;
 }
 
-.estagiario-GV {
-    font-family: 'Unkempt', cursive;
+.membro-GV {
+    color: rgb(230, 255, 242); 
+    display: inline-block;
+    margin-right: 3px;
     font-size: 1.1em;
-    color: rgb(230, 255, 242);
 }
 
 #televisao {
