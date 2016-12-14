@@ -1,0 +1,33 @@
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 13px;
+    background: #cccccc;
+}
+
+#listes {
+    display: inline-block;
+}
+
+#listes select {
+    margin: 5px;
+}
+
+#carte {
+    display: inline-block;
+}
+
+.OK {
+    background-color: "#00cc66";
+}
+
+.NOK {
+    background-color: "#ff3300";
+}
+
+#boutons {
+    margin-top: 20px;
+}
+
+#listePays {
+    display: none;
+}
