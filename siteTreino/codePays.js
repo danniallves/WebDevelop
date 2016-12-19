@@ -38,10 +38,15 @@ function creerSelect(nb) {
     var spanNode = document.createElement("span");
     spanNode.id = "numero" + nb;
     spanNode.innerHTML = nb;
-    spanNode.className = "wilson";
     listes.appendChild(spanNode);
     
     listes.appendChild(clone);
+    
+    var correctionNode = document.createElement("div");
+    correctionNode.id = "corrNum" + nb;
+    correctionNode.className = "correction";
+    
+    listes.appendChild(correctionNode);
     
     var sautLigne = document.createElement("br");
     listes.appendChild(sautLigne);
@@ -58,11 +63,11 @@ function fonctionValider() {
         //teste si la liste i affiche le bon pays
         if (paysChoisi == tableauOrdrePays[i]) {
             //document.getElementById("numero"+i).style.backgroundColor = "#0066cc";
-            document.getElementById("numero"+i).className = "OK";
+            document.getElementById("corrNum"+i).className = "correction OK";
         }
         else {
             //document.getElementById("numero"+i).style.backgroundColor = "#cc6600";
-            document.getElementById("numero"+i).className = "NOK";
+            document.getElementById("corrNum"+i).className = "correction NOK";
         }
     }
 }
@@ -74,6 +79,6 @@ function fonctionReset() {
         //affichage première valeur
         document.forms["listes"].elements["liste"+i].selectedIndex = 0;
         //document.getElementById("numero"+i).style.backgroundColor = "#ffffff";
-        document.getElementById("numero"+i).className = "wilson";
+        document.getElementById("corrNum"+i).className = "correction";
     }
 }

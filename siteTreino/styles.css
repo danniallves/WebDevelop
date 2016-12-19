@@ -17,11 +17,11 @@ body {
 }
 
 .OK {
-    background-color: "#00cc66";
+    background-image: url(imagens/green-tick.png);
 }
 
 .NOK {
-    background-color: "#ff3300";
+    background-image: url(imagens/red-cross.png);
 }
 
 #boutons {
@@ -32,6 +32,8 @@ body {
     display: none;
 }
 
-.wilson {
-    background-color: lightgreen;
+.correction {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
 }
