@@ -38,6 +38,7 @@ function creerSelect(nb) {
     var spanNode = document.createElement("span");
     spanNode.id = "numero" + nb;
     spanNode.innerHTML = nb;
+    spanNode.className = "wilson";
     listes.appendChild(spanNode);
     
     listes.appendChild(clone);

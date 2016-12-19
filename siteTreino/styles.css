@@ -31,3 +31,7 @@ body {
 #listePays {
     display: none;
 }
+
+.wilson {
+    background-color: lightgreen;
+}
