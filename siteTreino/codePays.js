@@ -57,12 +57,12 @@ function fonctionValider() {
         
         //teste si la liste i affiche le bon pays
         if (paysChoisi == tableauOrdrePays[i]) {
-            document.getElementById("numero"+i).style.backgroundColor = "#0066cc";
-            //document.getElementById("numero"+i).className = "OK";
+            //document.getElementById("numero"+i).style.backgroundColor = "#0066cc";
+            document.getElementById("numero"+i).className = "OK";
         }
         else {
-            document.getElementById("numero"+i).style.backgroundColor = "#cc6600";
-            //document.getElementById("numero"+i).className = "NOK";
+            //document.getElementById("numero"+i).style.backgroundColor = "#cc6600";
+            document.getElementById("numero"+i).className = "NOK";
         }
     }
 }
@@ -73,7 +73,7 @@ function fonctionReset() {
     for (var i = 1; i <=7; i++) {
         //affichage première valeur
         document.forms["listes"].elements["liste"+i].selectedIndex = 0;
-        document.getElementById("numero"+i).style.backgroundColor = "#ffffff";
-        //document.getElementById("numero"+i).className = "";
+        //document.getElementById("numero"+i).style.backgroundColor = "#ffffff";
+        document.getElementById("numero"+i).className = "wilson";
     }
 }
