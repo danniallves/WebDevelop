@@ -14,7 +14,7 @@ tableauPays[7] = "Turkiménistan";
 
 //Tableau des pays dans le bon ordre
 var tableauOrdrePays = new Array();
-tableauOrdrePays[1] = "Azerbaïjdan";
+tableauOrdrePays[1] = "Azerbaïdjan";
 tableauOrdrePays[2] = "Turkménistan";
 tableauOrdrePays[3] = "Ouzbékistan";
 tableauOrdrePays[4] = "Afghanistan";
