@@ -7,14 +7,17 @@
 </head>
 <body>
     <h1>Jogo da memória</h1>
+
+    <button id="reiniciar">Reiniciar</button>
     
-    <input type="number" min="30" max="60" id="widthCarta"><label for="widthCarta">Largura das cartas</label>
-    
-    <!-- Botões de iniciar e reiniciar o jogo -->
-    <div>
+    <!-- Opções do jogo -->
+    <form id="opcoes">
+        <input type="radio" name="dificuldade" value="facil">Fácil (6 cartas)<br>
+        <input type="radio" name="dificuldade" value="medio">Médio (10 cartas)<br>
+        <input type="radio" name="dificuldade" value="dificil">Difícil (15 cartas)<br>
+        <input type="radio" name="dificuldade" value="desafio">Desafiador (20 cartas)<br>
         <button id="iniciar">Iniciar</button>
-        <button id="reiniciar">Reiniciar</button>
-    </div>
+    </form>
     
     <!-- Matriz com as cartas do jogo -->
     

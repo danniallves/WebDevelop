@@ -24,3 +24,19 @@
 .pareado {
     display: none;
 }
+
+table td {
+    /*border: 1px solid black;*/
+    border-collapse: collapse;
+    width: 70px;
+    height: 100.9px;
+}
+
+button {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+#reiniciar {
+    display: none;
+}
