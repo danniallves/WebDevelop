@@ -1,0 +1,26 @@
+.carta {
+    width: 50px;
+    background-color: #ccc;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    height: 80.9px;
+    line-height: 80.9px;
+    border-radius: 5px;
+}
+
+.certo {
+    box-shadow: 0px 0px 5px green;
+}
+
+.errado {
+    box-shadow: 0px 0px 5px red;
+}
+
+.marcado {
+   box-shadow: 0px 0px 5px yellow;
+}
+
+.pareado {
+    display: none;
+}
