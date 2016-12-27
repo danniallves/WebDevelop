@@ -73,28 +73,7 @@ function comecarJogo() {
 					linhas = 2;
 					colunas = 3;
 			}
-			/*alert(dificuldade[i].value);
-			if (dificuldade[i].value = "facil") {
-				linhas = 3;
-				colunas = 4;
-			}
-			else if (dificuldade[i].value = "medio") {
-				linhas = 4;
-				colunas = 6;
-			}
-			else if (dificuldade[i].value = "dificil") {
-				linhas = 5;
-				colunas = 6;
-			}
-			else if (dificuldade[i].value = "desafio") {
-				linhas = 5;
-				colunas = 8;
-			}
-			else {
-				linhas = 2;
-				colunas = 3;
-			}
-			*/
+			
 			break;
 		}//fim do if checked
 	}//fim do loop para varrer as opcoes de dificuldade
@@ -191,7 +170,9 @@ function selecionaCarta() {
 			numAcertos++;
 			acertos.innerHTML = numAcertos;
             setTimeout(function(){ desmarcaCerto(bingo[0], bingo[1]) }, 1500);
-            
+            if (document.getElementById("numCartasDiferentes").innerHTML == document.getElementById("acertos").innerHTML) {
+				setTimeout(terminarJogo, 2000);
+			}
         }
         // as cartas não correspondem
         else {
@@ -203,17 +184,10 @@ function selecionaCarta() {
         
         //reseta o primeiro click
         primeiroClick = 0; 
-		if (document.getElementById("numCartasDiferentes").innerHTML == document.getElementById("acertos").innerHTML) {
-			terminarJogo();
-		}
+		
     }
     //fim de se for o segundo click
 }//fim de selecionaCarta
-
-/*var cartas = document.getElementsByClassName("carta");
-for (var i = 0; i < cartas.length; i++) {
-    cartas[i].onclick = selecionaCarta; 
-}*/
 
 
 ///função para virar e desvirar as cartas
@@ -245,5 +219,4 @@ function criaContainerCarta() {
 	
 }
 
-//começa o jogo
-//comecarJogo();
+
