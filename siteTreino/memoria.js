@@ -13,10 +13,15 @@ function criarTabela(lin, col) {
         var row = table.insertRow(i);
         for (var j = 0; j < col; j++) {
             var cell = row.insertCell(j);
-            var carta = document.createElement("div");
+            /*var carta = document.createElement("div");
             carta.className = "carta _" + num.toString();
-            carta.innerHTML = num;
-            cell.appendChild(carta);
+            carta.innerHTML = num;*/
+			var containerCarta = criaContainerCarta();
+			var carta = containerCarta.getElementsByClassName("carta")[0];
+			carta.className += " _" + num;
+			carta.childNodes[1].innerHTML = "";
+			carta.childNodes[3].innerHTML = num;
+            cell.appendChild(containerCarta);
             num %= lin*col/2;
             num++;
         }
@@ -41,11 +46,16 @@ function desmarcaCerto(carta1, carta2) {
 function desmarcaErrado(carta1, carta2) {
     carta1.className = carta1.className.substr(0, carta1.className.length - 7);
     carta2.className = carta2.className.substr(0, carta2.className.length - 7);
+	viraCarta(carta1);
+	viraCarta(carta2);
 }
 ///////////////////////////////////////////////////////////////////
 
 
 function selecionaCarta() {
+	
+	viraCarta(this);
+	
     //se for o primeiro click
     if (primeiroClick == 0) {
         primeiroClick = this.className;
@@ -56,14 +66,16 @@ function selecionaCarta() {
     else {
         segundoClick = this.className;
         var marcado = document.getElementsByClassName("marcado")[0];
-        marcado.className = marcado.className.substr(0, 9); //retira a classe marcado 
+		var indiceMarcado = marcado.className.indexOf("marcado");
+		//retira a classe marcado 
+        marcado.className = marcado.className.substring(0, indiceMarcado - 1) + marcado.className.substring(indiceMarcado + 7, marcado.className.length); 
         
         //se as cartas corresponderem
         if (primeiroClick == segundoClick) {
             var bingo = document.getElementsByClassName(primeiroClick);
             bingo[0].className += " certo";
             bingo[1].className += " certo";
-            setTimeout(function(){ desmarcaCerto(bingo[0], bingo[1]) }, 500);
+            setTimeout(function(){ desmarcaCerto(bingo[0], bingo[1]) }, 1500);
             
         }
         // as cartas não correspondem
@@ -71,7 +83,7 @@ function selecionaCarta() {
             marcado.className += " errado";
             segCarta = this;
             segCarta.className += " errado";
-            setTimeout(function(){ desmarcaErrado(marcado, segCarta) }, 500);
+            setTimeout(function(){ desmarcaErrado(marcado, segCarta) }, 1500);
         }
         
         //reseta o primeiro click
@@ -86,30 +98,32 @@ for (var i = 0; i < cartas.length; i++) {
 }
 
 
-//parte de virar a carta
-
-//var card = document.getElementById("card");
-
-function flipCard(cartaNode) {
-	//alert("vira a carta");
-	//var card = document.getElementById("card");
-	//var card = cartaNode.parentNode;
+///função para virar e desvirar as cartas
+function viraCarta(cartaNode) {
+	
 	var card = cartaNode;
 	
-	/*if (carta.className == "front") {
-		carta.className = "back";
-	}
-	else {
-		carta.className = "front";
-	}*/
+	var indice = card.className.indexOf("virada"); //busca em que parte do nome da classe está a palavra "virada"
 	
-	//alert(card.className.substr(card.className.length - 8, 8));
-	
-	if (card.className.substr(card.className.length - 7, 7) == "flipped") {
-		card.className = card.className.substr(0, card.className.length - 7);
+	//se a carta já estiver virada
+	if (indice != -1) {
+		card.className = card.className.substring(0, indice - 1) + card.className.substring(indice + 6, card.className.length); //desvira a carta
 	}
+	//se ainda não estiver virada
 	else {
-		card.className += " flipped";
+		card.className += " virada"; //vira a carta
 	}
 }
- 
+
+
+//função para criar as cartas com frente e verso
+function criaContainerCarta() {
+	
+	var cartaMae = document.getElementById("cartaMae");
+	var container = cartaMae.getElementsByClassName("container")[0];
+	var containerClone = container.cloneNode(true);
+	return containerClone;
+	
+}
+
+

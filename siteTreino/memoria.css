@@ -1,12 +1,6 @@
-.carta {
-    width: 50px;
-    background-color: #ccc;
-    display: inline-block;
-    text-align: center;
-    margin: 10px;
-    height: 80.9px;
-    line-height: 80.9px;
-    border-radius: 5px;
+
+#opcoes, #cartaMae {
+	display: none;
 }
 
 .certo {
@@ -42,16 +36,17 @@ button {
 }
 
 .container {
-	width: 120px;
-	height: 200px;
+	width: 50px;
+	height: 80.9px;
+	margin: 10px;
 	position: relative;
 	perspective: 800px;
-	color: white;
 	text-align: center;
-	line-height: 200px;
+	line-height: 80.9px;
+	border-radius: 5px;
 }
 
-#card {
+/*#card {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -79,6 +74,38 @@ button {
 }
 
 #card.flipped {
+	transform : rotateY(180deg);
+}
+*/
+
+.carta {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+.carta figure {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: block;
+	margin: 0;
+	font-size: 2em;
+	backface-visibility: hidden;
+}
+
+.carta .frente {
+	background-color: #ccc;
+}
+
+.carta .verso {
+	background-color: #ccc;
+	transform: rotateY(180deg);
+}
+
+.virada {
 	transform : rotateY(180deg);
 }
 

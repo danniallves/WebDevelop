@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da memória</title>
     <link rel="stylesheet" href="memoria.css">
 </head>
@@ -25,14 +26,18 @@
     
     </div>
 	
-	<!-- Roda carta -->
+	<!-- Carta base para copiar e criar as cartas -->
+	<div id="cartaMae" class="thunder">
 	<section class="container">
-		<div id="card" class="tshabalala" onclick="flipCard(this)">
-			<figure class="front">1</figure>
-			<figure class="back">2</figure>
+		<div class="carta" onclick="viraCarta(this)">
+			<figure class="frente">1</figure>
+			<figure class="verso">2</figure>
 		</div>
 	</section>
-	<button id="flip-card">Flip</button>
+	</div>
+	
+	<!-- botão para gerar numero aleatório -->
+	<button id="aleatorio" onclick="alert(Math.floor(Math.random() * 10));">Gerar</button>
     
     <script src="memoria.js"></script>
 </body>
