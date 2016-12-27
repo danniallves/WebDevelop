@@ -84,4 +84,32 @@ var cartas = document.getElementsByClassName("carta");
 for (var i = 0; i < cartas.length; i++) {
     cartas[i].onclick = selecionaCarta; 
 }
+
+
+//parte de virar a carta
+
+//var card = document.getElementById("card");
+
+function flipCard(cartaNode) {
+	//alert("vira a carta");
+	//var card = document.getElementById("card");
+	//var card = cartaNode.parentNode;
+	var card = cartaNode;
+	
+	/*if (carta.className == "front") {
+		carta.className = "back";
+	}
+	else {
+		carta.className = "front";
+	}*/
+	
+	//alert(card.className.substr(card.className.length - 8, 8));
+	
+	if (card.className.substr(card.className.length - 7, 7) == "flipped") {
+		card.className = card.className.substr(0, card.className.length - 7);
+	}
+	else {
+		card.className += " flipped";
+	}
+}
  

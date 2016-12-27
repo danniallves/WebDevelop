@@ -40,3 +40,48 @@ button {
 #reiniciar {
     display: none;
 }
+
+.container {
+	width: 120px;
+	height: 200px;
+	position: relative;
+	perspective: 800px;
+	color: white;
+	text-align: center;
+	line-height: 200px;
+}
+
+#card {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+#card figure {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: block;
+	margin: 0;
+	font-size: 4em;
+	backface-visibility: hidden;
+}
+
+#card .front {
+	background: blue;
+}
+
+#card .back {
+	background: red;
+	transform: rotateY(180deg);
+}
+
+#card.flipped {
+	transform : rotateY(180deg);
+}
+
+button#flip-card {
+	margin: 20px;
+}
