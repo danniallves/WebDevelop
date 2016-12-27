@@ -5,6 +5,13 @@ var segundoClick = 0;
 //função que cria a tabela com "lin" linhas e "col" colunas
 function criarTabela(lin, col) {
     
+	var numCartas = lin*col/2;
+	var arrayCartas = [];
+	for (var i = 1; i <= numCartas; i++) {
+		arrayCartas.push(i);
+		arrayCartas.push(i);
+	}
+	
     var table = document.createElement("table");
     table.id = "tabela";
     
@@ -18,12 +25,13 @@ function criarTabela(lin, col) {
             carta.innerHTML = num;*/
 			var containerCarta = criaContainerCarta();
 			var carta = containerCarta.getElementsByClassName("carta")[0];
+			var indiceAleatorio = Math.floor(Math.random()*1000) % arrayCartas.length;
+			var num = arrayCartas[indiceAleatorio];
 			carta.className += " _" + num;
 			carta.childNodes[1].innerHTML = "";
 			carta.childNodes[3].innerHTML = num;
             cell.appendChild(containerCarta);
-            num %= lin*col/2;
-            num++;
+            arrayCartas.splice(indiceAleatorio, 1);
         }
     }
     
