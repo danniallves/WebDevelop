@@ -9,22 +9,23 @@
 <body>
     <h1>Jogo da memória</h1>
 
-    <button id="reiniciar">Reiniciar</button>
     
     <!-- Opções do jogo -->
-    <form id="opcoes">
+    <div id="opcoes">
         <input type="radio" name="dificuldade" value="facil">Fácil (6 cartas)<br>
-        <input type="radio" name="dificuldade" value="medio">Médio (10 cartas)<br>
+        <input type="radio" name="dificuldade" value="medio">Médio (12 cartas)<br>
         <input type="radio" name="dificuldade" value="dificil">Difícil (15 cartas)<br>
         <input type="radio" name="dificuldade" value="desafio">Desafiador (20 cartas)<br>
-        <button id="iniciar">Iniciar</button>
-    </form>
-    
-    <!-- Matriz com as cartas do jogo -->
+        <button id="iniciar" onclick="comecarJogo()">Iniciar</button>
+    </div>
+	
+    <!-- O jogo -->
     
     <div id="jogo">
-    
+		<p id="cartasDiferentes">Número de cartas diferentes: <span id="numCartasDiferentes"></span>
+    	<p id="contaAcertos">Número de acertos: <span id="acertos">0</span></p>
     </div>
+	<button id="terminar" onclick="terminarJogo()">Terminar</button>
 	
 	<!-- Carta base para copiar e criar as cartas -->
 	<div id="cartaMae" class="thunder">

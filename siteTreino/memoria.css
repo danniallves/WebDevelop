@@ -1,5 +1,5 @@
 
-#opcoes, #cartaMae {
+#cartaMae {
 	display: none;
 }
 
@@ -31,8 +31,8 @@ button {
     margin-bottom: 10px;
 }
 
-#reiniciar {
-    display: none;
+#terminar {
+	display: none;
 }
 
 .container {
@@ -46,37 +46,9 @@ button {
 	border-radius: 5px;
 }
 
-/*#card {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	transform-style: preserve-3d;
-	transition: transform 1s;
+#jogo {
+	display: none;
 }
-
-#card figure {
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	display: block;
-	margin: 0;
-	font-size: 4em;
-	backface-visibility: hidden;
-}
-
-#card .front {
-	background: blue;
-}
-
-#card .back {
-	background: red;
-	transform: rotateY(180deg);
-}
-
-#card.flipped {
-	transform : rotateY(180deg);
-}
-*/
 
 .carta {
 	position: absolute;
