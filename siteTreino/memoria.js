@@ -19,9 +19,6 @@ function criarTabuleiro(lin, col) {
         var row = table.insertRow(i);
         for (var j = 0; j < col; j++) {
             var cell = row.insertCell(j);
-            /*var carta = document.createElement("div");
-            carta.className = "carta _" + num.toString();
-            carta.innerHTML = num;*/
 			var containerCarta = criaContainerCarta();
 			var carta = containerCarta.getElementsByClassName("carta")[0];
 			var indiceAleatorio = Math.floor(Math.random()*1000) % arrayCartas.length;
@@ -84,6 +81,7 @@ function comecarJogo() {
 	
 	var numCartasDiferentes = linhas*colunas/2;
 	document.getElementById("numCartasDiferentes").innerHTML = numCartasDiferentes;
+    document.getElementById("acertos").innerHTML = 0;
 	
 	criarTabuleiro(linhas, colunas);
 	
@@ -171,7 +169,7 @@ function selecionaCarta() {
 			acertos.innerHTML = numAcertos;
             setTimeout(function(){ desmarcaCerto(bingo[0], bingo[1]) }, 1500);
             if (document.getElementById("numCartasDiferentes").innerHTML == document.getElementById("acertos").innerHTML) {
-				setTimeout(terminarJogo, 2000);
+				setTimeout(terminarJogo, 1600);
 			}
         }
         // as cartas não correspondem
