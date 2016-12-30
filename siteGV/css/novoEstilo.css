@@ -1,0 +1,34 @@
+@font-face {
+    font-family: berlinSans;
+    src: url("Berlin Sans FB.ttf");
+}
+
+.container {
+    background-color: #ddd !important;
+}
+
+#logo-gv {
+    display: block;
+    margin: auto;
+}
+
+nav {
+    font-family: berlinSans !important;
+    font-size: 1.5em !important;
+    color: #111 !important;
+    background-color: #ddd !important;
+    border: none !important;
+    margin: 30px !important;
+}
+
+.espaco-vazio {
+    height: 100px;
+}
+
+#guitarra-isaac {
+    margin-left: 100px;
+}
+
+#nina {
+    margin-left: 100px;
+}
