@@ -15,7 +15,7 @@
 nav {
     font-family: berlinSans !important;
     font-size: 1.5em !important;
-    color: #111 !important;
+    color: #222 !important;
     background-color: #ddd !important;
     border: none !important;
     margin: 30px !important;
@@ -32,3 +32,9 @@ nav {
 #nina {
     margin-left: 100px;
 }
+
+#redes-sociais {
+    display: inline-block !important;
+    margin-top: 50px !important;
+    position: relative !important;
+} 
