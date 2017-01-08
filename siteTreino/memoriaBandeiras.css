@@ -1,0 +1,86 @@
+
+#cartaMae {
+	display: none;
+}
+
+.certo {
+    box-shadow: 0px 0px 5px green;
+}
+
+.errado {
+    box-shadow: 0px 0px 5px red;
+}
+
+.marcado {
+   box-shadow: 0px 0px 5px yellow;
+}
+
+.pareado {
+    display: none;
+}
+
+table td {
+    /*border: 1px solid black;*/
+    border-collapse: collapse;
+    width: 150px;
+    height: 105px;
+}
+
+button {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+#terminar {
+	display: none;
+}
+
+.container {
+	width: 130px;
+	height: 85px;
+	margin: 10px;
+	position: relative;
+	perspective: 800px;
+	text-align: center;
+	line-height: 85px;
+	border-radius: 5px;
+}
+
+#jogo {
+	display: none;
+}
+
+.carta {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+.carta figure {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: block;
+	margin: 0;
+	font-size: 1.5em;
+	backface-visibility: hidden;
+}
+
+.carta .frente {
+	background-color: #ccc;
+}
+
+.carta .verso {
+	background-color: #ccc;
+	transform: rotateX(180deg);
+}
+
+.virada {
+	transform : rotateX(180deg);
+}
+
+button#flip-card {
+	margin: 20px;
+}

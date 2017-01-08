@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da memória</title>
+    <link rel="stylesheet" href="memoriaBandeiras.css">
+</head>
+<body>
+    <h1>Jogo da memória</h1>
+    <p>Jogo com os países da américa do sul</p>
+    
+    <!-- Opções do jogo -->
+    <div id="opcoes">
+        <input type="radio" name="dificuldade" value="facil">Fácil (4 cartas)<br>
+        <input type="radio" name="dificuldade" value="medio">Médio (6 cartas)<br>
+        <input type="radio" name="dificuldade" value="dificil">Difícil (8 cartas)<br>
+        <!--<input type="radio" name="dificuldade" value="desafio">Desafiador (20 cartas)<br>-->
+        <button id="iniciar" onclick="comecarJogoBandeiras()">Iniciar</button>
+    </div>
+	
+    <!-- O jogo -->
+    
+    <div id="jogo">
+		<p id="cartasDiferentes">Número de cartas diferentes: <span id="numCartasDiferentes"></span>
+    	<p id="contaAcertos">Número de acertos: <span id="acertos">0</span></p>
+    </div>
+	<button id="terminar" onclick="terminarJogo()">Terminar</button>
+	
+	<!-- Carta base para copiar e criar as cartas -->
+	<div id="cartaMae" class="thunder">
+	<section class="container">
+		<div class="carta" onclick="viraCarta(this)">
+			<figure class="frente">Oi</figure>
+			<figure class="verso">Tchau</figure>
+		</div>
+	</section>
+	</div>
+	
+    <script src="americas.js"></script>
+    <script src="memoria.js"></script>
+    <script src="memBandeiras.js"></script>
+</body>
+</html>
