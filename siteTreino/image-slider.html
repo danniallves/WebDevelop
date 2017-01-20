@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        .container {
+          max-width: 400px;
+          background-color: black;
+          margin: 0 auto;
+          text-align: center;
+          position: relative;
+        }
+        .container div {
+          background-color: white;
+          width: 100%;
+          position: absolute;
+          display: none;
+        }
+        .container img {
+          width: 100%;
+          height: auto;
+        }
+
+        button {
+          position: absolute;
+        }
+
+        .next {
+          right: 5px;
+        }
+
+        .prev {
+          left: 5px;
+        }
+
+    </style>
+</head>
+</html>
+
+
+
+<section class="demo">
+  <button class="next">Next</button>
+  <button class="prev">Previous</button>
+  <div class="container">
+    <div style="display: block;">
+      <img src="imagens/bandeiras/americas/argentina.png"/>
+    </div>
+    <div>
+     <img src="imagens/bandeiras/americas/bolivia.png"/>
+    </div>
+    <div>
+     <img src="imagens/bandeiras/americas/brasil.png"/>
+    </div>
+      <div>
+     <img src="imagens/bandeiras/americas/uruguai.png"/>
+    </div>
+  </div>
+</section>
+
+<div class="explanation">
+  Building a slideshow like pattern that can accurately cycle through a number of unknown divs, forwards and backwards. Trying to use as little code as possible. Leave a comment if you see a way to do it better!
+</div>
+
+<script>
+var currentIndex = 0,
+  items = $('.container div'),
+  itemAmt = items.length;
+
+function cycleItems() {
+  var item = $('.container div').eq(currentIndex);
+  //items.hide(500);
+    items.fadeOut(500);
+  item.fadeIn(500);
+}
+    
+geraAutoSlide();
+    
+function geraAutoSlide() {
+    autoSlide = setInterval(function() {
+        currentIndex += 1;
+        if (currentIndex > itemAmt - 1) {
+            currentIndex = 0;
+        }
+        cycleItems();
+    }, 3000);
+}
+/*var autoSlide = setInterval(function() {
+    currentIndex += 1;
+    if (currentIndex > itemAmt - 1) {
+        currentIndex = 0;
+    }
+    cycleItems();
+}, 500);*/
+
+$('.next').click(function() {
+    clearInterval(autoSlide);
+    currentIndex += 1;
+    if (currentIndex > itemAmt - 1) {
+        currentIndex = 0;
+    }
+    cycleItems();
+    geraAutoSlide();
+});
+
+$('.prev').click(function() {
+    clearInterval(autoSlide);
+    currentIndex -= 1;
+        if (currentIndex < 0) {
+    currentIndex = itemAmt - 1;
+    }
+    cycleItems();
+    geraAutoSlide();
+});
+</script>

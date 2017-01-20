@@ -270,7 +270,7 @@ section#jogos {
 /*#palheta {
     -webkit-transform: rotateY(120deg);
     transform: rotateY(120deg);
-}*/
+}
 
 @keyframes giraPalheta {
     0% {-webkit-transform: rotateY(0deg); transform: rotateY(0deg);}
@@ -283,6 +283,14 @@ section#jogos {
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: 5;
+}*/
+
+#palheta {
+    transition: transform 1s;
+}
+
+#palheta.deitada {
+    transform: rotate(-90deg);
 }
 
 /*****************   MEDIA QUERIES     **********************/

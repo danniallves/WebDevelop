@@ -38,6 +38,20 @@
     <button id="figure-pixels" onclick="testaWindow()">Descubra</button>
         
     <img id="palheta" src="imagens/icon-palheta-GV.png" alt="palheta GV">
+        
+    <script>
+        var palheta = document.getElementById("palheta");
+        palheta.onclick = function() {
+            //alert("clicou na palheta!");
+            var indice = this.className.indexOf(" deitada");
+            if (indice > -1) {
+                this.className = this.className.substr(0, indice) + this.className.substr(indice + 8, this.className.length);
+            }
+            else {
+                this.className += " deitada";
+            }
+        };
+    </script>
 	
 	<section id="formulario">
 	

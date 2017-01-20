@@ -193,3 +193,11 @@ button#restart {
 section#joguinhos h1, h2{
 	text-align: center;
 }
+
+#palheta {
+    transition: transform: 1s;
+}
+
+#palheta.deitada {
+    transform: rotate(90);
+}
