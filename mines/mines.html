@@ -6,30 +6,41 @@
     <link rel="stylesheet" href="css/mines.css">
 </head>
 <body>
-    <h1>Mines Game</h1>
-    <nav id="menu" class="menu">
-        <ul>
-            <li id="menuIcon">menu-icon</li>
-            <li id="newGame">New</li>
-            <li id="quitGame">Quit</li>
-        </ul>
-    </nav>
+    <header>
+        <h1>Mines Game</h1>
+        <nav id="menu" class="menu">
+            <h2>Menu</h2>
+            <ul>
+                <!--<li id="menuIcon">Menu</li>-->
+                <li id="newGame">New</li>
+                <li id="quitGame">Quit</li>
+            </ul>
+        </nav>
+    </header>
     <div id="options">
-        <h2>Grid size</h2>
+        <h2>Options</h2>
         <div id="gridSize">
-            <input type="radio" name="grid_size" id="grid10" value="10X10"><label for="grid10">10x10</label>
-            <input type="radio" name="grid_size" id="grid20" value="20X20"><label for="grid20">20x20</label>
-            <input type="radio" name="grid_size" id="grid30" value="30X30"><label for="grid30">30x30</label>
-            <input type="radio" name="grid_size" id="grid40" value="40X40"><label for="grid40">40x40</label>
+            <h3>Grid Size</h3>
+            <ul>
+                <li><input type="radio" name="grid_size" id="grid10" value="10X10"><label for="grid10">10x10</label></li>
+                <li><input type="radio" name="grid_size" id="grid15" value="15X15"><label for="grid15">15x15</label></li>
+                <li><input type="radio" name="grid_size" id="grid20" value="20X20"><label for="grid20">20x20</label></li>
+                <li><input type="radio" name="grid_size" id="grid25" value="25X25"><label for="grid25">25x25</label></li>
+                <li><input type="radio" name="grid_size" id="grid30" value="30X30"><label for="grid30">30x30</label></li>
+                
+            </ul>
         </div>
         <div id="numBombs">
-            <input type="radio" name="num_bombs" id="bombs10" value="10"><label for="bombs10">10</label>
-            <input type="radio" name="num_bombs" id="bombs15" value="15"><label for="bombs15">15</label>
-            <input type="radio" name="num_bombs" id="bombs20" value="20"><label for="bombs20">20</label>
-            <input type="radio" name="num_bombs" id="bombs25" value="25"><label for="bombs25">25</label>
-            <input type="radio" name="num_bombs" id="bombs30" value="30"><label for="bombs30">30</label>
+            <h3>Quantity of bombs</h3>
+            <ul>
+                <li><input type="radio" name="num_bombs" id="bombs10" value="10"><label for="bombs10">10</label></li>
+                <li><input type="radio" name="num_bombs" id="bombs15" value="15"><label for="bombs15">15</label></li>
+                <li><input type="radio" name="num_bombs" id="bombs20" value="20"><label for="bombs20">20</label></li>
+                <li><input type="radio" name="num_bombs" id="bombs25" value="25"><label for="bombs25">25</label></li>
+                <li><input type="radio" name="num_bombs" id="bombs30" value="30"><label for="bombs30">30</label></li>
+            </ul>
         </div>
-        <button id="btnStart">Start</button>
+        <button id="btnStart">Start Game</button>
     </div>
     <div id="gameFrame" class="gameWindow">
         <header>

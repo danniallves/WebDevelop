@@ -21,7 +21,7 @@
     margin: 10px auto;
 }
 
-.grid, .grid td, .grid tr {
+.grid, .grid td {
     border: 1px solid black;
     border-collapse: collapse;
 }
