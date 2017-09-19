@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Mines</title>
+    <link rel="stylesheet" href="css/mines.css">
+</head>
+<body>
+    <h1>Mines Game</h1>
+    <nav id="menu" class="menu">
+        <ul>
+            <li id="menuIcon">menu-icon</li>
+            <li id="newGame">New</li>
+            <li id="quitGame">Quit</li>
+        </ul>
+    </nav>
+    <div id="options">
+        <h2>Grid size</h2>
+        <div id="gridSize">
+            <input type="radio" name="grid_size" id="grid10" value="10X10"><label for="grid10">10x10</label>
+            <input type="radio" name="grid_size" id="grid20" value="20X20"><label for="grid20">20x20</label>
+            <input type="radio" name="grid_size" id="grid30" value="30X30"><label for="grid30">30x30</label>
+            <input type="radio" name="grid_size" id="grid40" value="40X40"><label for="grid40">40x40</label>
+        </div>
+        <div id="numBombs">
+            <input type="radio" name="num_bombs" id="bombs10" value="10"><label for="bombs10">10</label>
+            <input type="radio" name="num_bombs" id="bombs15" value="15"><label for="bombs15">15</label>
+            <input type="radio" name="num_bombs" id="bombs20" value="20"><label for="bombs20">20</label>
+            <input type="radio" name="num_bombs" id="bombs25" value="25"><label for="bombs25">25</label>
+            <input type="radio" name="num_bombs" id="bombs30" value="30"><label for="bombs30">30</label>
+        </div>
+        <button id="btnStart">Start</button>
+    </div>
+    <div id="gameFrame" class="gameWindow">
+        <header>
+            <div id="clock">Clock</div>
+            <div id="emoticon"></div>
+            <div id="flags">
+                <button id="btnFlags" class="flag"></button>
+                <div id="flagCounter">Flags left: <span id="numFlags"></span></div>
+            </div>
+        </header>
+        <div id="gridFrame">
+            <table id="grid" class="grid"></table>
+        </div>
+    </div>
+    <script src="js/helperFunctions.js"></script>
+    <script src="js/minesObjects.js"></script>
+    <script src="js/minesController.js"></script>
+</body>
+</html>

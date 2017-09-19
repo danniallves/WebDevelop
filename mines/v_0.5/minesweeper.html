@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Minesweeper</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .grid, .grid td, .grid tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        .grid td {
+            position: relative;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+        }
+        
+        .grid td > button {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 96%;
+            height: 96%;
+            border-radius: 0;
+            background-color: #dedede;
+        }
+        
+        .grid td > button.flagged {
+            background-image: url("flag50px.png");
+        }
+        
+        .grid td > button:not([disabled]):hover {
+            cursor: pointer;
+            background-color: #eee;
+        }
+        
+        .grid td > button.flagged:hover {
+            cursor: default;
+            background-color: #dedede;
+        }
+        
+        #btnFlags {
+            background-image: url("flag50px.png");
+            height: 50px;
+            width: 50px;
+        }
+        
+        #btnFlags:hover {
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Minesweeper Game</h1>
+    <nav id="menu" class="menu">
+        <ul>
+            <li id="menuIcon">menu-icon</li>
+            <li id="newGame">New</li>
+            <li id="quitGame">Quit</li>
+        </ul>
+    </nav>
+    <div id="options">
+        <h2>Grid size</h2>
+        <div id="gridSize">
+            <input type="radio" name="grid_size" id="grid10" value="10X10"><label for="grid10">10x10</label>
+            <input type="radio" name="grid_size" id="grid20" value="20X20"><label for="grid20">20x20</label>
+            <input type="radio" name="grid_size" id="grid30" value="30X30"><label for="grid30">30x30</label>
+            <input type="radio" name="grid_size" id="grid40" value="40X40"><label for="grid40">40x40</label>
+        </div>
+        <div id="numBombs">
+            <input type="radio" name="num_bombs" id="bombs10" value="10"><label for="bombs10">10</label>
+            <input type="radio" name="num_bombs" id="bombs15" value="15"><label for="bombs15">15</label>
+            <input type="radio" name="num_bombs" id="bombs20" value="20"><label for="bombs20">20</label>
+            <input type="radio" name="num_bombs" id="bombs25" value="25"><label for="bombs25">25</label>
+            <input type="radio" name="num_bombs" id="bombs30" value="30"><label for="bombs30">30</label>
+        </div>
+        <button id="btnStart">Start</button>
+    </div>
+    <div id="gameFrame" class="gameWindow">
+        <div id="clock"></div>
+        <div id="emoticon"></div>
+        <div id="flags">
+            <button id="btnFlags"></button>
+        </div>
+        <div id="gridFrame">
+            <table id="grid" class="grid"></table>
+        </div>
+    </div>
+    <script src="minesObjects.js"></script>
+    <script src="minesController.js"></script>
+<!--<script src="Minesweeper.js"></script>
+<script>
+    
+function checkStatus(match) {
+    var btnFlags = document.getElementById("btnFlags");
+    if (parseInt(btnFlags.value)%2) {
+        match.flagMode = true;
+    }
+    else {
+        match.flagMode = false;
+    }
+    var btns = document.getElementsByTagName("button");
+    var buttons =[];
+    for (var i = 0; i < btns.length; i++) {
+        if (btns[i].className.search("gridButton") > -1) {
+            buttons.push(btns[i]);
+        }
+    }
+    for (var i = 0; i < buttons.length; i++) {
+        var square = buttons[i].parentNode.value;
+        if (square.flagged && buttons[i].className.search("flagged") === -1) {
+            buttons[i].className += " flagged";
+        }
+        /*else if (square.unveiled) {
+            buttons[i].parentNode.removeChild(buttons[i]);
+        }*/
+        else if (!square.flagged) {
+            var buttonClass = buttons[i].className;
+            var pos = buttonClass.search("flagged");
+            if ( pos > -1) { //button has flagged class but is not flagged, so have to remove the class
+                buttons[i].className = buttonClass.substring(0, pos);
+            }
+        }
+        
+        if (match.flagMode) {
+            buttons[i].disabled = false;
+        }
+        else {
+            if (square.flagged) {
+                button[i].disabled = true;
+            }
+            else if (square.unveiled) {
+                buttons[i].parentNode.removeChild(buttons[i]);
+            }
+        }
+    }
+    match.checkMove(square);
+    if (match.status === "ended") {
+        alert("should have ended");
+        //var buttons = document.getElementsByClassName("gridButton");
+        var btns = document.getElementsByTagName("button");
+        var buttons =[];
+        for (var i = 0; i < btns.length; i++) {
+            if (btns[i].className.search("gridButton") > -1) {
+                buttons.push(btns[i]);
+            }
+        }
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].disabled = true;
+        }
+        var btnStart = document.getElementById("Start");
+        btnStart.disabled = false;
+        clearInterval(match.gameId);
+    }
+}
+    
+function newGame(btnStart) {
+    
+    btnStart.disabled = true;
+    
+    var tableGrid = document.getElementsByClassName("grid")[0];
+    while(tableGrid.firstChild) {
+        tableGrid.removeChild(tableGrid.firstChild);
+    }
+    
+    var gridSizes = document.getElementsByName("grid_size");
+    var gridSize;
+    for (var i = 0; i < gridSizes.length; i++) {
+        if (gridSizes[i].checked) {
+            gridSize = gridSizes[i].value;
+            break;
+        }
+    }
+    var numBombsList = document.getElementsByName("num_bombs");
+    var numBombs;
+    for (var i = 0; i < numBombsList.length; i++) {
+        if (numBombsList[i].checked) {
+            numBombs = numBombsList[i].value;
+        }
+    }
+    
+    var match = new Match(gridSize, numBombs);
+    match.grid.drawGrid(tableGrid);
+    
+    var buttons = document.getElementsByClassName("gridButton");
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+            var square = this.parentNode.value;
+            square.click(match);
+        });
+    }
+    
+    match.start();
+    match.gameId = setInterval(function() {
+        checkStatus(match);
+    }, 300);
+    
+}
+    
+function toggleFlagMode(btn) {
+    btn.value = parseInt(btn.value) + 1;
+    var spanFlagMode = document.getElementById("flagMode");
+    if (parseInt(btnFlags.value)%2) {
+        spanFlagMode.innerHTML = "On";
+    }
+    else {
+        spanFlagMode.innerHTML = "Off";
+    }
+}
+</script>-->
+</body>
+</html>
