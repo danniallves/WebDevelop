@@ -193,6 +193,11 @@ Controller.prototype.addGridButtonsBehaviour = function() {
                 }
             }
         });
+        controller.ui.gridButtons[i].addEventListener("mouseover", function() {
+            if (!controller.match.flagMode && this.className.search("flagged") !== -1) {
+                this.style.cursor = "default";
+            }
+        });
     }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////

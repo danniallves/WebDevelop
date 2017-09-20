@@ -126,18 +126,6 @@ Square.prototype.toggleFlagged = function() {
     this.flagged = toggleState(this.flagged);
 }
 
-Square.prototype.click = function(match) {
-    if (match.flagMode) {
-        //alert("flagMode On");
-        this.toggleFlagged();
-    }
-    else {
-        //alert("flagMode Off");
-        match.unveilSquare(this);
-    }
-    //alert("flagged = " + this.flagged);
-}
-
 Square.prototype.toString = function() {
     if (this.isBomb) {
         return "B";
@@ -384,7 +372,7 @@ Match.prototype.checkStatus = function() {
 
 //unveils the specified square
 Match.prototype.unveilSquare = function(square) {
-    if (square.unveiled) {
+    if (square.unveiled || square.flagged) {
         return;
     }
     square.unveiled = true;
@@ -458,7 +446,7 @@ Match.prototype.clickSquare = function(square) {
             this.numFlags++;
         }
     }
-    else {
+    else if (!square.flagged) {
         this.unveilSquare(square);
     }
 }

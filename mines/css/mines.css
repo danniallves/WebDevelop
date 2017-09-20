@@ -5,7 +5,7 @@
 #gameFrame {
     position: relative;
     border: 2px solid black;
-    background-color: aliceblue;
+    background-color: #ccc;
     padding: 10px;
     margin: 10px auto;
 }
@@ -31,6 +31,44 @@
     text-align: center;
     width: 50px;
     height: 50px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.grid td:hover {
+    cursor: default;
+}
+
+._1 {
+    color: rgb(0, 13, 209);
+}
+
+._2 {
+    color: rgb(8, 122, 12);
+}
+
+._3 {
+    color: rgb(255, 0, 0);
+}
+
+._4 {
+    color: rgb(20, 2, 109);
+}
+
+._5 {
+    color: rgb(150, 150, 3);
+}
+
+._6 {
+    color: rgb(84, 33, 31);
+}
+
+._7 {
+    color: rgb(14, 91, 0);
+}
+
+._8 {
+    color: rgb(102, 13, 130);
 }
 
 .gridButton {
@@ -40,12 +78,12 @@
     width: 96%;
     height: 96%;
     border-radius: 0;
-    background-color: #dedede;
+    background-color: #ddd;
 }
 
 .gridButton:not([disabled]):hover {
     cursor: pointer;
-    background-color: #eee;
+    background-color: #fff;
 }
 
 .gridButton.flagged:hover {
@@ -83,8 +121,8 @@ div#flags {
 
 #btnFlags.clicked {
     border: 2px solid rgba(250, 250, 250, 0.3);
-    border-left: 2px solid rgba(0, 0, 0, 0.45);
-    border-top: 2px solid rgba(0, 0, 0,  0.45);
+    border-left: 2px solid rgba(0, 0, 0, 0.5);
+    border-top: 2px solid rgba(0, 0, 0,  0.5);
 }
 
 #flagCounter {

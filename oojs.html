@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <div>
+      <label for="jscode">Enter code:</label>
+      <input type="text" id="jscode">
+      <button>Submit code</button>
+    </div>
+
+    <p></p>
+  </body>
+
+    <script>
+        var input = document.querySelector('input');
+        var btn = document.querySelector('button');
+        var para = document.querySelector('p');
+        btn.onclick = function() {
+            var code = input.value;
+            para.textContent = eval(code);
+        }
+
+        /*function createNewPerson(name) {
+          var obj = {};
+          obj.name = name;
+          obj.greeting = function() {
+            alert('Hi! I\'m ' + this.name + '.');
+          };
+          return obj;
+        }   */
+        /*function Person(name) {
+            this.name = name;
+            this.greeting = function() {
+                alert('Hi! I\'m ' + this.name + '.');
+            };
+        }
+        
+        var person1 = new Person('Bob');
+        var person2 = new Person('Sarah');*/
+        function Person(first, last, age, gender, interests) {
+            this.name = {
+                first,
+                last
+            };
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+            this.bio = function() {
+                var strBio = this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. ';
+                if (interests.length > 0) {
+                    strBio += (this.gender.toLowerCase()=='male' ? 'He' : 'She') + ' likes ' + this.interests[0];
+                    for(var i = 1; i < interests.length; i++) {
+                        strBio += (i == interests.length-1 ? ' and ' : ', ') + this.interests[i];
+                    }
+                }
+                strBio += '.';
+                alert(strBio);
+            };
+            this.greeting = function() {
+                alert('Hi! I\'m ' + this.name.first + '.');
+            };
+        }
+    </script>
+</html>
